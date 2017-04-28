@@ -1,4 +1,5 @@
 /*
+Exercice 1 b)
 Ecrire un algorithme qui simule une opération de retrait d’argent. L’algorithme demandera
 la saisie d’un solde et d’un montant de retrait et affichera un message et le nouveau solde
 selon l’opération réalisée. 
