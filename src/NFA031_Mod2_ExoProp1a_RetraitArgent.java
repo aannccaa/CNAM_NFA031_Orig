@@ -7,12 +7,22 @@ public class NFA031_Mod2_ExoProp1a_RetraitArgent {
 
 	public static void main(String[] args) {
 		double mntRetrait, soldeCompte;
-		System.out.print("Rentrez votre solde en banque ?: ");
+		System.out.print("Rentrez votre solde en banque : ");
 		soldeCompte = Lire.d();
-		System.out.print("Quelle est le montant que vous voulez retirer? :");
-		mntRetrait = Lire.d();
-		if (soldeCompte >= mntRetrait) {
-			System.out.print("Opération authorisée. Voici le montant demandé");
+		
+		if (soldeCompte == 0) {
+			System.out.print("Opération non authorisée. Solde en banque insufisant !");
+		} else {
+
+			System.out.print("Quelle est le montant que vous voulez retirer? :");
+			mntRetrait = Lire.d();
+
+			if (soldeCompte >= mntRetrait) {
+				soldeCompte = soldeCompte - mntRetrait;
+				System.out.format("Opération authorisée. Le nouveau solde en banque est de : %.2f euros.", soldeCompte);
+			} else {
+				System.out.print("Opération non authorisée. Solde en banque insufisant !");
+			}
 		}
 	}
 
