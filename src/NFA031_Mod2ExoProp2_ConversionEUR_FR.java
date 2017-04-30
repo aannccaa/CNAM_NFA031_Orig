@@ -1,7 +1,7 @@
 /*
 Exercice 2)
 Ecrire un algorithme qui permettra de réaliser , selon le choix indiqué par
-l’utilisatEUR , la conversion FRFnc EURo ou la conversion EURo FRFnc d’un montant
+l’utilisateur , la conversion FRF en EUR ou la conversion EUR en FRF d’un montant
 tapé en entrée .
 */
 
