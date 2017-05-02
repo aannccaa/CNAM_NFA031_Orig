@@ -3,7 +3,7 @@ Exercice 2
 Tracez l'exécution du programme suivant à l'aide d'un tableau d'évolution des variables :
  */
 
-public class NFA031_Mod3_ExoProp2_TracerExecProgram {
+public class NFA031_Mod3_ExempleExo2_enigme_TracerExecProgram {
 
 	public static void main(String[] args) {
 		int x = 0;

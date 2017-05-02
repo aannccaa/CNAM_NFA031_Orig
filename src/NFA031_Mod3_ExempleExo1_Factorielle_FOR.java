@@ -5,7 +5,7 @@ valeur de n. La factorielle d’un nombre entier n est le produit des entiers
 successifs de 1 à n . On écrit : n ! = factorielle de n = 1*2*3*.......*n
 Par exemple : 5 ! = 1*2*3*4*5 = 120
  */
-public class NFA031_Mod3_ExoProp1_Factorielle_FOR {
+public class NFA031_Mod3_ExempleExo1_Factorielle_FOR {
 
 	public static void main(String[] args) {
 		int n, i, fact_n=1;
