@@ -5,13 +5,12 @@ Remarque : ce code ne correspond à aucun problème concret. Son but est de s’entr
 un programme sans faire appel au sens de ce programme.
  */
 
-public class NFA031_Mod3_ExoProp3_QueFaitLeProg {
+public class NFA031_Mod3_ExoProp3_TracerQueFaitLeProg {
 
 	public static void main(String[] args) {
-		{
-			int i, j, r;
+		int i, j, r;
 
-			for (i = 1; i <= 3; i = i + 1)
+		for (i = 1; i <= 3; i = i + 1)
 
 			{
 				for (j = 1; j <= 5; j = j + 1)
@@ -32,6 +31,4 @@ public class NFA031_Mod3_ExoProp3_QueFaitLeProg {
 			}
 
 		}
-
-	}
 }
