@@ -8,7 +8,7 @@ la moyenne maximale, la moyenne minimale et la moyenne générale de la classe.
 
 public class NFA031_Mod3_ExoProp1_MoyenneMinMax_Notes {
 	public static void main(String[] args) {
-		int coefMath = 2, coefInfo = 4, coefFra = 2, nbEleves = 2;
+		int coefMath = 2, coefInfo = 4, coefFra = 2, nbEleves = 25;
 		double noteMath, noteInfo, noteFra, moyenneEleve, sommeMoyennesEleves = 0, moyenneMinClasse = 20,
 				moyenneMaxClasse = 0, moyenneGenClasse = 0;
 
