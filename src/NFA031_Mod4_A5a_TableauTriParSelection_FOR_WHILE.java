@@ -1,5 +1,5 @@
 
-public class NFA031_Mod4_Tableau_5a_TriParSelection_FOR_WHILE {
+public class NFA031_Mod4_A5a_TableauTriParSelection_FOR_WHILE {
 
 	public static void main(String[] args) {
 

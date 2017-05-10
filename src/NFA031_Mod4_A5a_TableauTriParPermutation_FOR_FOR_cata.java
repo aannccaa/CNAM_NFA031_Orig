@@ -1,5 +1,5 @@
 
-public class NFA031_Mod4_Tableau_5a_TriParPermutation_FOR_FOR_cata {
+public class NFA031_Mod4_A5a_TableauTriParPermutation_FOR_FOR_cata {
 
 	public static void main(String[] args) {
 		int T1[] = { 5, 7, 3, 1, 6 };

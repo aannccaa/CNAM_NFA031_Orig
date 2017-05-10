@@ -1,5 +1,5 @@
 
-public class NFA031_Mod4_Tableau_5a_TriParSelection_FOR_FOR {
+public class NFA031_Mod4_A5a_TableauTriParSelection_FOR_FOR {
 
 	public static void main(String[] args) {
 		int i, j, min, indexMin, longueurTableau;

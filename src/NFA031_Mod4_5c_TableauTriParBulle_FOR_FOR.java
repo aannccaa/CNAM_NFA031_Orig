@@ -1,5 +1,5 @@
 
-public class NFA031_Mod4_Tableau_5c_TriParBulle_FOR_FOR {
+public class NFA031_Mod4_5c_TableauTriParBulle_FOR_FOR {
 
 	public static void main(String[] args) {
 
