@@ -1,5 +1,5 @@
 /*
-Rentrer dans un tableau à 2 dimensions les donnes suivantes:
+Rentrer dans un tableau à 2 dimensions les données suivantes:
 {7,  3,  4}
 {2,  8,  9}
 Demander à l’utilisateur de rentrer d’abord tous les éléments de la ligne 1 
