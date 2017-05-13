@@ -8,7 +8,7 @@ l’élève est supérieure ou égale à 10.
 c) Calculer et afficher la moyenne générale de la classe.
 */
 
-public class NFA031_Mod5_Exemple2_Tableau {
+public class NFA031_Mod4_Exemple2_Tableau {
 	public static void main(String[] args) {
 		int nbEleves = 2, coefMath = 3, coefFra = 2, coefInfo = 5;
 		double noteMathEleve, noteFraEleve, noteInfoEleve, moyenneNotesEleve, sommeMoyennesEleves = 0,

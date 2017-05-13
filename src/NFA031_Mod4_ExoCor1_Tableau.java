@@ -7,7 +7,7 @@ cette valeur maximale, ainsi que la détermination des indices auxquels ils sont 
 d) Ajouter à votre programme le calcul de la moyenne des nombres du tableau.
 */
 
-public class NFA031_Mod5_ExoCor1_Tableau {
+public class NFA031_Mod4_ExoCor1_Tableau {
 	public static void main(String[] args) {
 		int nbEntiers;
 		int valMax = Integer.MIN_VALUE; 

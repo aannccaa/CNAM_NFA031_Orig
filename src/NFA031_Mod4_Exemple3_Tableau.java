@@ -2,7 +2,7 @@
 Indiquer le résultat de l’exécution du code suivant: 
 */
 
-public class NFA031_Mod5_Exemple3_Tableau {
+public class NFA031_Mod4_Exemple3_Tableau {
 	public static void main(String[] args) {
 		int i, j;
 		char tab[][] = new char[5][5];
