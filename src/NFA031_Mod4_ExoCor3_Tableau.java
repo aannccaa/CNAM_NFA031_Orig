@@ -9,8 +9,8 @@ dans une colonne dont l’indice est fourni par l’utilisateur.
 public class NFA031_Mod4_ExoCor3_Tableau {
 
 	public static void main(String[] args) {
-		int minLigne = Integer.MAX_VALUE;
-		int maxCol = Integer.MIN_VALUE;
+		int minLigne; // = Integer.MAX_VALUE;
+		int maxCol; // = Integer.MIN_VALUE;
 		int nbLignes = 2;
 		int nbCol = 2;
 		int tab[][] = new int[nbLignes][nbCol];
@@ -38,6 +38,7 @@ public class NFA031_Mod4_ExoCor3_Tableau {
 		// Trouver le min de la ligne indexLigne
 		System.out.print("Donner l'indice de la ligne pour laquelle vous voulez calculer le minimum des valeurs :");
 		int indexLigne = Lire.i();
+		minLigne = tab[indexLigne][0]; 
 		for (int j = 0; j < nbCol; j++) {
 			if (tab[indexLigne][j] < minLigne) {
 				minLigne = tab[indexLigne][j];
@@ -46,8 +47,10 @@ public class NFA031_Mod4_ExoCor3_Tableau {
 		System.out.println("Val min de la ligne d'indice " + indexLigne + " est " + minLigne);
 
 		// Trouver le max de la colonne indexCol
+		
 		System.out.print("Donner l'indice de la colonne pour laquelle vous voulez calculer le maximum des valeurs :");
 		int indexCol = Lire.i();
+		maxCol = tab[0][indexCol];
 		for (int i = 0; i < nbLignes; i++) {
 			if (tab[i][indexCol] > maxCol) {
 				maxCol = tab[i][indexCol];
