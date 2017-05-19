@@ -14,6 +14,8 @@ public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 
 		// fonction
 		resoudreEquationPremierDegre(a, b);
+		String message = resoudreEquationPremierDegreString(a, b);
+		System.out.println(message);
 
 	}
 
@@ -25,7 +27,7 @@ public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 		}
 
 		if ((a == 0) && (b == 0)) {
-			System.out.println("Tout nombre est une soution");
+			System.out.println("Tout nombre est une solution");
 		}
 
 		if ((a == 0) && (b != 0)) {
@@ -33,4 +35,35 @@ public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 		}
 	}
 
+	public static String resoudreEquationPremierDegreString(double a, double b) {
+		double x;
+		String message;
+		if (a != 0) {
+			x = -b / a;
+			message = "Valeur de x = " + x;
+		} else if (b == 0) {
+			message = "Tout nombre est une solution";
+		} else {// (a == 0) && (b != 0)
+
+			message = "Pas de solution, division par zéro impossible.";
+		}
+		return message;
+	}
+
+	
+
+	public static String resoudreEquationPremierDegreString3(double a, double b) {
+		if (a != 0) {
+
+			double x = -b / a;
+			return "Valeur de x = " + x;
+		}
+
+		if (b == 0) {
+			return "Tout nombre est une solution";
+			// (a == 0) && (b != 0)
+		}
+		return "Pas de solution, division par zéro impossible.";
+
+	}
 }
