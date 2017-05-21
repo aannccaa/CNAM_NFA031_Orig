@@ -1,5 +1,5 @@
 /*
-pour un mot donnée, donner la lettre pour une position choisie
+pour un mot donnée, trouver la lettre qui se trouve sur une position choisie par l'utilisateur
  */
 public class NFA031_Mod6_2a_Chaines_charAt_positionLettre {
 
