@@ -24,13 +24,12 @@ public class NFA031_Mod6_Chaines_ExoProp1_bis {
 		System.out.println("La conjugaison du verbe régulier '" + infinitifVerbe + "' au présent indicatif est:");
 
 		for (int i = 0; i < tabPersonnes.length; i++) {
-			for (int j = 0; i < tabTerminaisons.length; j++) {
-				if (i == j) {
-					System.out.println(tabPersonnes[i] + " " + racineVerbe + tabTerminaisons[j]);
-					j = j + 1;
-					i = i + 1;
-				}
-			}
+			
+				
+					System.out.println(tabPersonnes[i] + " " + racineVerbe + tabTerminaisons[i]);
+				
+				
+			
 		}
 	}
 }
