@@ -12,12 +12,19 @@ A , 1 , 2, R , Y , 6 , F , 9 , 8 , 7  , le tableau 'tabbis' devra contenir :
 N.B : vous pouvez utiliser la méthode : Character.isDigit , qui prend en argument un caractère et retourne ‘true’ si le caractère est un nombre et ‘false’ dans le cas contraire , ainsi que la méthode : Character.isLetter , qui joue le même rôle pour les lettres . 
  */
 
-public class NFA031_Devoir2_2 {
+public class NFA031_Devoir2_2_cata {
+	public static int LETTRE = 1;
+	public static int CHIFFRE = 2;
+	public static int EXCLAMATION = 3;
+	public static int PUNCTUATION = 4;
 
 	public static void main(String[] args) {
 		int nombreCharacteres;
 		int nombreLettres;
 		int nombreChiffres;
+		int nombreExclamation;
+		int nombrePunctuation;
+		char charIntroduit;
 		String tableau;
 
 		System.out.print("Donner le nombre de characteres : ");
@@ -31,14 +38,12 @@ public class NFA031_Devoir2_2 {
 
 		nombreChiffres = calculerNombreChiffres(tab);
 		nombreLettres = calculerNombreLettres(tab);
-
+		nombreExclamation = calculerNombreExclamation(tab);
+		nombrePunctuation = calculerNombrePunctuation(tab);
 		System.out.println("Nb de chiffres : " + nombreChiffres);
 		System.out.println("Nb de lettres : " + nombreLettres);
-
-		char[] tabbis = creerTabbis(tab, nombreChiffres, nombreLettres);
-		System.out.print("Le tableau tabbis est : ");
-
-		System.out.println(convertTableauEnString(tabbis));
+		System.out.println("Nb de exclamations : " + nombreExclamation);
+		System.out.println("Nb de punctuations : " + nombrePunctuation);
 
 	}
 
@@ -95,132 +100,48 @@ public class NFA031_Devoir2_2 {
 
 	// fonction pour calculer le nombre de lettres contenues dans le tableau
 	public static int calculerNombreLettres(char[] tab) {
-		int nombreLettres = 0;
+		return calculerNombreParType(tab, LETTRE);
+		/*
+		 * int nombreLettres = 0;
+		 * 
+		 * for (int i = 0; i < tab.length; i++) { if (estLettre(tab[i])) {
+		 * nombreLettres = nombreLettres + 1; } } return nombreLettres;
+		 */ }
+
+	public static int calculerNombreExclamation(char[] tab) {
+		return calculerNombreParType(tab, EXCLAMATION);
+	}
+	
+	public static int calculerNombrePunctuation(char[] tab) {
+		return calculerNombreParType(tab, PUNCTUATION);
+	}
+	
+
+	public static int calculerNombreParType(char[] tab, int type) {
+		int nombreParType = 0;
 
 		for (int i = 0; i < tab.length; i++) {
-			if (estLettre(tab[i])) {
-				nombreLettres = nombreLettres + 1;
+			if (characterEstDeTpe(tab[i], type)) {
+				nombreParType = nombreParType + 1;
 			}
 		}
-		return nombreLettres;
+		return nombreParType;
 	}
 
-	// concatenner 2 tableaux
-	public static char[] concatTableaux1(char[] tab1, char[] tab2) {
-		char[] tab = new char[tab1.length + tab2.length];
-		for (int i = 0; i < tab1.length; i++) {
-			tab[i] = tab1[i];
+	public static boolean characterEstDeTpe(char c, int type) {
+		if (type == LETTRE) {
+			return estLettre(c);
+		} else if (type == CHIFFRE) {
+			return estChiffre(c);
+		} else if (type == EXCLAMATION) {
+			return c == '!';
+		} else 
+			if (type == PUNCTUATION) {
+				return ((c == ';') || (c == '.'));
+			} else 
+		{// type inconnu
+			return false;// cas impossible
 		}
-		int decalage = tab1.length;
-		for (int i = 0; i < tab2.length; i++) {
-
-			tab[i + decalage] = tab2[i];
-		}
-
-		return tab;
 	}
 
-	public static char[] concatTableaux(char[] tab1, char[] tab2) {
-		char[] tab = new char[tab1.length + tab2.length];
-		int positionLibreTab = 0;
-		for (int i = 0; i < tab1.length; i++) {
-			tab[positionLibreTab] = tab1[i];
-			positionLibreTab++;
-		}
-		for (int i = 0; i < tab2.length; i++) {
-
-			tab[positionLibreTab] = tab2[i];
-			positionLibreTab++;
-		}
-
-		return tab;
-	}
-
-	public static char[] creerTabbis(char[] tab, int nombreChiffres, int nombreLettres) {
-		// creez un tablou de cifre
-		char[] tabChiffres = new char[nombreChiffres];
-		// creez un tablou de litere
-		char[] tabLettres = new char[nombreLettres];
-		// parcurg tab si umplu dintr-o singura trecere tablourile de cifre si
-		// de litere
-		int positionLibreTabChiffres = 0;
-		int positionLibreTabLettres = 0;
-		for (int i = 0; i < tab.length; i++) {
-			char temp = tab[i];
-			if (estChiffre(temp)) {
-				tabChiffres[positionLibreTabChiffres] = temp;
-				positionLibreTabChiffres++;
-			} else {
-				if (estLettre(temp)) {
-					tabLettres[positionLibreTabLettres] = temp;
-					positionLibreTabLettres++;
-				}
-			}
-		}
-
-		// daca nrCifre > nrLitere
-		char[] tabbis;
-		if (nombreChiffres > nombreLettres) {
-			// resultatul este concatenarea tabloului de cifre si a tabloului de
-			// litere
-			tabbis = concatTableaux(tabChiffres, tabLettres);
-		} else {
-			// resultatul este concatenarea tabloului de litere si a tabloului
-			// de cifre
-			tabbis = concatTableaux(tabLettres, tabChiffres);
-		}
-
-		return tabbis;
-	}
-
-	public static char[] creerTabbis1(char[] tab, int nombreChiffres, int nombreLettres) {
-		int longueurTabbis = nombreChiffres + nombreLettres;
-		char[] tabbis = new char[longueurTabbis];
-		if (nombreChiffres > nombreLettres) {
-			int positionLibre = 0;
-			// parcurg tablobul si cand gasesc o cifra o adaug in tabbis pe cea
-			// mai mica pozitie libera
-			for (int i = 0; i < tab.length; i++) {
-				char temp = tab[i];
-				if (estChiffre(temp)) {
-					tabbis[positionLibre] = temp;
-					positionLibre = positionLibre + 1;
-
-				}
-			}
-			// parcurg tablobul si cand gasesc o litera o adaug in tabbis la
-			// stanga
-			for (int i = 0; i < tab.length; i++) {
-				char temp = tab[i];
-				if (estLettre(temp)) {
-					tabbis[positionLibre] = temp;
-					positionLibre = positionLibre + 1;
-
-				}
-			}
-		} else {
-			int positionLibre = 0;
-			// parcurg tablobul si cand gasesc o litera o adaug in tabbis pe cea
-			// mai mica pozitie libera
-			for (int i = 0; i < tab.length; i++) {
-				char temp = tab[i];
-				if (estLettre(temp)) {
-					tabbis[positionLibre] = temp;
-					positionLibre = positionLibre + 1;
-
-				}
-			}
-			// parcurg tablobul si cand gasesc o cifre o adaug in tabbis la
-			// stanga
-			for (int i = 0; i < tab.length; i++) {
-				char temp = tab[i];
-				if (estChiffre(temp)) {
-					tabbis[positionLibre] = temp;
-					positionLibre = positionLibre + 1;
-
-				}
-			}
-		}
-		return tabbis;
-	}
 }
