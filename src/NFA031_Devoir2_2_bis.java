@@ -1,5 +1,4 @@
-/* 
- * Exercice 2:
+/*
 a) Ecrire un programme qui demande à un utilisateur de donner N caractères qui sont soit des chiffres, soit des lettres, 
 N étant un entier fourni par l'utilisateur au début de l'exécution du programme. 
 Ces caractères seront stockés dans un tableau 'tab'. 
@@ -17,12 +16,12 @@ retourne ‘true’ si le caractère est un nombre et ‘false’ dans le cas co
 ainsi que la méthode: Character.isLetter, qui joue le même rôle pour les lettres. 
  */
 
-public class NFA031_Devoir2_2 {
+public class NFA031_Devoir2_2_bis {
 
 	public static void main(String[] args) {
-		int nombreCharacteres; // nc
-		int nombreLettres; // nl
-		int nombreChiffres; // N
+		int nombreCharacteres;
+		int nombreLettres;
+		int nombreChiffres;
 		String tableau;
 
 		System.out.print("Donner le nombre de characteres: ");
@@ -30,14 +29,14 @@ public class NFA031_Devoir2_2 {
 
 		char[] tab = remplirTableauCharacteres(nombreCharacteres);
 		tableau = convertTableauEnString(tab);
-		System.out.print("Le tableau de characteres introduites est: ");
+		System.out.print("Le tableau de characteres est: ");
 		System.out.println(tableau);
 
 		nombreChiffres = calculerNombreChiffres(tab);
 		nombreLettres = calculerNombreLettres(tab);
 
-		System.out.println("Nombre de chiffres: " + nombreChiffres);
-		System.out.println("Nombre de lettres: " + nombreLettres);
+		System.out.println("Nb de chiffres: " + nombreChiffres);
+		System.out.println("Nb de lettres: " + nombreLettres);
 
 		char[] tabbis = creerTabbis(tab, nombreChiffres, nombreLettres);
 		System.out.print("Le tableau tabbis est: ");
@@ -70,7 +69,7 @@ public class NFA031_Devoir2_2 {
 	}
 
 	// fonction pour evaluer si un character est un chiffre
-	// retourne vrai si c est chiffre, sinon faux;
+	// retourne vrai si c est chiffre, sinon retourne faux;
 	public static boolean estChiffre(char c) {
 		return Character.isDigit(c);
 
@@ -79,7 +78,7 @@ public class NFA031_Devoir2_2 {
 	}
 
 	// fonction pour evaluer si un character est une lettre
-	// retourne vrai si c est lettre, sinon faux;
+	// retourne vrai si c est une lettre, sinon retourne faux;
 	public static boolean estLettre(char c) {
 		return Character.isLetter(c);
 	}
@@ -106,8 +105,11 @@ public class NFA031_Devoir2_2 {
 		return nombreLettres;
 	}
 
-	// concatenner 2 tableaux, en copiant un a un tous les éléments du tab1,
-	// puis du tab2
+	// concatenner 2 tableaux, en copiant un a un dans la première position
+	// libre tous les éléments du tab1,
+	// puis du tab2,
+	// La première position libre à l'indice 0 et sera incrémentée après chaque
+	// copie de charactère
 	public static char[] concatTableaux(char[] tab1, char[] tab2) {
 		char[] tab = new char[tab1.length + tab2.length];
 		int positionLibreTab = 0;
@@ -119,6 +121,23 @@ public class NFA031_Devoir2_2 {
 
 			tab[positionLibreTab] = tab2[i];
 			positionLibreTab++;
+		}
+
+		return tab;
+	}
+
+	// concatenner 2 tableaux (variante), en copiant à partir de la position 0
+	// les valeurs du tableau tab1,
+	// puis les valeurs du tab2
+	public static char[] concatTableaux1(char[] tab1, char[] tab2) {
+		char[] tab = new char[tab1.length + tab2.length];
+		for (int i = 0; i < tab1.length; i++) {
+			tab[i] = tab1[i];
+		}
+		int decalage = tab1.length;
+		for (int i = 0; i < tab2.length; i++) {
+
+			tab[i + decalage] = tab2[i];
 		}
 
 		return tab;
@@ -162,4 +181,60 @@ public class NFA031_Devoir2_2 {
 		return tabbis;
 	}
 
+	// (variante) fonction pour créer le tableau tabbis en deux passages.
+	// Passage1 on copie les charactères de type chiffre ou lettre, ayant le
+	// plus grand nombre au début du tableau
+	//
+	// Passage2 on copie les charactères de type chiffre ou lettre, ayant le
+	// plus petit nombre à la fin du tableau
+	public static char[] creerTabbis1(char[] tab, int nombreChiffres, int nombreLettres) {
+		int longueurTabbis = nombreChiffres + nombreLettres;
+		char[] tabbis = new char[longueurTabbis];
+		if (nombreChiffres > nombreLettres) {
+			int positionLibre = 0;
+			// parcourir le tableau jusqu'un ciffre est trouvé. L'ajouter dans
+			// tabbis sur la plus petite position libre.
+			for (int i = 0; i < tab.length; i++) {
+				char temp = tab[i];
+				if (estChiffre(temp)) {
+					tabbis[positionLibre] = temp;
+					positionLibre = positionLibre++;
+
+				}
+			}
+			// parcourir le tableau jusqu'une lettre est trouvée. L'ajouter dans
+			// tabbis sur la plus petite position libre
+			for (int i = 0; i < tab.length; i++) {
+				char temp = tab[i];
+				if (estLettre(temp)) {
+					tabbis[positionLibre] = temp;
+					positionLibre = positionLibre++;
+
+				}
+			}
+		} else {
+			int positionLibre = 0;
+			// parcourir le tableau jusqu'une lettre est trouvée. L'ajouter dans
+			// tabbis sur la plus petite position libre
+			for (int i = 0; i < tab.length; i++) {
+				char temp = tab[i];
+				if (estLettre(temp)) {
+					tabbis[positionLibre] = temp;
+					positionLibre = positionLibre++;
+
+				}
+			}
+			// parcourir le tableau jusqu'un ciffre est trouvé. L'ajouter dans
+			// tabbis sur la plus petite position libre.
+			for (int i = 0; i < tab.length; i++) {
+				char temp = tab[i];
+				if (estChiffre(temp)) {
+					tabbis[positionLibre] = temp;
+					positionLibre = positionLibre++;
+
+				}
+			}
+		}
+		return tabbis;
+	}
 }

@@ -1,5 +1,5 @@
 /*
-Exercice 1 .
+Exercice 1:
 a) Ecrire un programme qui demande à un utilisateur de donner 10 nombres entiers strictement positifs. 
 Ces nombres seront stockés dans un tableau 'tab' . 
 b) Ecrire le code qui permet de calculer et d'afficher la moyenne m des nombres de ce tableau .
