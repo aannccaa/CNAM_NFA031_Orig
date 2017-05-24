@@ -1,4 +1,4 @@
-/* 
+e/* 
  * Exercice 2:
 a) Ecrire un programme qui demande à un utilisateur de donner N caractères qui sont soit des chiffres, soit des lettres, 
 N étant un entier fourni par l'utilisateur au début de l'exécution du programme. 
