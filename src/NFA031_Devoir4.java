@@ -54,6 +54,8 @@ public class NFA031_Devoir4 {
 		
 		
 		String stop="";
+		String editeurCourrant="?";
+		String editeurARechercher;
 		do {
 		// demander l'éditeur dans une boucle, jusqu'à ce que l'utilisateur décide d'arrêter
 		System.out.print("Donner un editeur pour retourner ses livres : (terminer avec *");
@@ -61,7 +63,7 @@ public class NFA031_Devoir4 {
 		
 		// retourner les livres d'un éditeur
 		for (int i=0; i<tab.length; i++) {
-			String editeurARechercher = tab[i];
+			editeurARechercher = tab[i];
 			// trouver l'indice du premier separateur "/"
 			if (tab[i] == "/") {
 				int indiceSeparateurInf = i;
@@ -69,7 +71,7 @@ public class NFA031_Devoir4 {
 				for (int j=indiceSeparateurInf; i<tab.length; i++) {
 					if (tab[i] == "/") {
 						int indiceSeparateurSup = j;
-						String editeurCourrant = tab[i].substring(indiceSeparateurInf, indiceSeparateurSup);
+						editeurCourrant = tab[i].substring(indiceSeparateurInf, indiceSeparateurSup);
 					}
 				}
 			}
