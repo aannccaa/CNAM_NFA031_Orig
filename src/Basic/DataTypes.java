@@ -12,6 +12,7 @@ public class DataTypes {
 		isTestsOK = testMultipliiMax() && isTestsOK;
 		isTestsOK = testFillArray() && isTestsOK;
 		isTestsOK = testSayHello() && isTestsOK;
+		isTestsOK = testSplit() && isTestsOK;
 
 		if (isTestsOK == true) {
 			System.out.println("Tests OK");
@@ -428,4 +429,100 @@ public class DataTypes {
 
 		return isTestsOK;
 	}
+
+	public static String[] split(char sep, String s) {
+		String[] result;
+		int compteur = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == sep) {
+				compteur++;
+			}
+		}
+		int nobmreFragments = compteur + 1;
+		result = new String[nobmreFragments];
+
+		String mot;
+		int start = 0;
+		int positionLibre = 0;
+		for (int i = 0; i <= s.length(); i++) {
+			if (i == s.length() || s.charAt(i) == sep) {
+				int positionSeparateur = i;
+				mot = s.substring(start, positionSeparateur);
+				result[positionLibre] = mot;
+				positionLibre++;
+				start = positionSeparateur + 1;
+
+			}
+		}
+		return result;
+	}
+
+	public static boolean testSplit() {
+
+		boolean isTestsOK = true;
+		String s;
+		String[] expected;
+		String[] current;
+		char sep = '/';
+
+		// test1
+		s = "Anca/face/prostii";
+		expected = new String[3];
+		expected[0] = "Anca";
+		expected[1] = "face";
+		expected[2] = "prostii";
+
+		current = split(sep, s);
+
+		if (!stringArrayEquals(expected, current)) {
+			isTestsOK = false;
+			printStringArray(current);
+			printStringArray(expected);
+		}
+
+		// test2
+		s = "Anca/nu stie/";
+		expected = new String[3];
+		expected[0] = "Anca";
+		expected[1] = "nu stie";
+		expected[2] = "";
+		
+		current = split(sep, s);
+
+		if (!stringArrayEquals(expected, current)) {
+			isTestsOK = false;
+			printStringArray(current);
+			printStringArray(expected);
+		}
+
+		return isTestsOK;
+	}
+
+	public static boolean stringArrayEquals(String[] t1, String[] t2) {
+		boolean isArrayEquals = true;
+		if (t1.length == t2.length) {
+			for (int i = 0; i < t1.length; i++) {
+				if (!t1[i].equals(t2[i])) {
+					isArrayEquals = false;
+					break;
+				}
+
+			}
+		} else {
+			isArrayEquals = false;
+		}
+		return isArrayEquals;
+	}
+
+	public static void printStringArray(String[] tab) {
+		System.out.print("{");
+		String sep = "";
+		for (int i = 0; i < tab.length; i++) {
+			System.out.print(sep + tab[i]);
+			sep = ";";
+		}
+		System.out.println("}");
+
+	}
+
 }

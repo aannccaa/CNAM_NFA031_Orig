@@ -11,84 +11,123 @@ Le code devra être rédigé de façon telle que l'utilisateur puisse effectuer auta
 
 public class NFA031_Devoir4 {
 	public static void main(String[] args) {
-		String nomLivre;
-		String auteur;
-		String editeur;
-		int nombreLivres;
-		String infoLivre;
-
-		// demander le nombre de livres à archiver
-		System.out.print("Donner le nombre de livres à archiver : ");
-		nombreLivres = Lire.i();
-		String[] tab = new String[nombreLivres];
-
-		// pour chaque livre, demander:
-		// Nom du livre
-		// AUTEUR
-		// EDITEUR
-		for (int i = 0; i < tab.length; i++) {
-			System.out.print("Donner le Nom du livre numéro " + i + " : ");
-			nomLivre = Lire.S();
-			System.out.print("Donner l'Auteur du livre numéro " + i + " : ");
-			auteur = Lire.S();
-			System.out.print("Donner l'Editeur du livre numéro " + i + " : ");
-			editeur = Lire.S();
-
-			// pour chaque livre stoquer dans un tableau les informations en
-			// format string
-			// "Nom du livre/AUTEUR/EDITEUR"
-			infoLivre = nomLivre + "/" + auteur + "/" + editeur;
-			tab[i] = infoLivre;
-		}
+		boolean testEnDur = false;
+		String[] tab = enregistrerLivres(testEnDur);
 
 		// imprimer le tableau des enregistrements
+		imprimerEnregistrements(tab);
+
+		// parcourir chaque string infoLivre, pour chercher si l'éditeur existe
+		// s'il existe, extraire les livres
+
+		String editeurARechercher;
+
+		// demander l'éditeur dans une boucle et retourner ses livres, jusqu'à
+		// ce que l'utilisateur décide d'arrêter
+		do {
+			System.out.print("Donner un editeur pour retourner ses livres (ou terminer avec *) : ");
+			editeurARechercher = Lire.S();
+
+			chercherParEditeur(tab, editeurARechercher);
+
+			// repéter jusqu'à ce que l'utilisateur décide d'arrêter
+		} while (!editeurARechercher.equals("*"));
+
+	}
+
+	// en mode test le tableau est initialisé avec des donnés en dur
+	private static String[] enregistrerLivres(boolean modeTest) {
+		if (modeTest) {
+			String[] tab = { "n/a/e", "n2/a2/e2", "n3/a3/e" };
+			return tab;
+		} else {
+			String nomLivre;
+			String auteur;
+			String editeur;
+			int nombreLivres;
+			String infoLivre;
+
+			// demander le nombre de livres à archiver
+			System.out.print("Donner le nombre de livres à archiver : ");
+			nombreLivres = Lire.i();
+			String[] tab = new String[nombreLivres];
+
+			// pour chaque livre, demander:
+			// Nom du livre
+			// AUTEUR
+			// EDITEUR
+			for (int i = 0; i < tab.length; i++) {
+				System.out.print("Donner le Nom du livre numéro " + i + " : ");
+				nomLivre = Lire.S();
+				System.out.print("Donner l'Auteur du livre numéro " + i + " : ");
+				auteur = Lire.S();
+				System.out.print("Donner l'Editeur du livre numéro " + i + " : ");
+				editeur = Lire.S();
+
+				// pour chaque livre stocker dans un tableau les informations en
+				// format string
+				// "Nom du livre/AUTEUR/EDITEUR"
+				infoLivre = nomLivre + "/" + auteur + "/" + editeur;
+				tab[i] = infoLivre;
+			}
+			return tab;
+		}
+	}
+
+	private static void imprimerEnregistrements(String[] tab) {
 		for (int i = 0; i < tab.length; i++) {
 			System.out.print("{");
 			System.out.print(tab[i]);
 			System.out.print("} \n");
 
 		}
-		
-		// parcourir chaque string infoLivre, pour chercher si l'éditeur existe
-		// s'il existe, extraire les livres
-		
-		
-		String stop="";
-		String editeurCourrant="?";
-		String editeurARechercher;
-		do {
-		// demander l'éditeur dans une boucle, jusqu'à ce que l'utilisateur décide d'arrêter
-		System.out.print("Donner un editeur pour retourner ses livres : (terminer avec *");
-		editeur = Lire.S();
-		
-		// retourner les livres d'un éditeur
-		for (int i=0; i<tab.length; i++) {
-			editeurARechercher = tab[i];
-			// trouver l'indice du premier separateur "/"
-			if (tab[i] == "/") {
-				int indiceSeparateurInf = i;
-				//trouver l'indice du deuxième separateur "/"
-				for (int j=indiceSeparateurInf; i<tab.length; i++) {
-					if (tab[i] == "/") {
-						int indiceSeparateurSup = j;
-						editeurCourrant = tab[i].substring(indiceSeparateurInf, indiceSeparateurSup);
-					}
-				}
-			}
-			
-			// vérifier si le string recherché est égal au string contenu entre les 2 separateurs "/.../" (correspond à l'éditeur)
-			if (editeurARechercher.equals(editeurCourrant)) {
-				
-			// extraire le string entre l' indice 0 et indice du premier "/"  (correspond au nom du livre)
-			
-			// stoquer le nom du livre dans un tableau tabEditeur
-			}
-			}
-		
-		// repéter jusqu'à ce que l'utilisateur décide d'arrêter
-		} while (stop != "*");
-		
 	}
 
-	// public static String[][] remplirTableau (int nombreLivres)
+	private static void chercherParEditeur(String[] tab, String editeurARechercher) {
+		String editeurCourrant;
+		String livreCourrant;
+		String auteurCourrant;
+		String nomLivreCourrant;
+		for (int i = 0; i < tab.length; i++) {
+			livreCourrant = tab[i];
+			String[] fragments = fragmenter('/', livreCourrant);
+
+			// l'editeur se trouve sur position 2 dans le tableau fragments
+			editeurCourrant = fragments[2];
+
+			// vérifier si l'éditeur recherché est égal à l'éditeur enregistré
+			if (editeurARechercher.equals(editeurCourrant)) {
+				auteurCourrant = fragments[1];
+				nomLivreCourrant = fragments[0];
+				System.out.println("Livre :" + nomLivreCourrant + "; Auteur : " + auteurCourrant);
+			}
+		}
+	}
+
+	public static String[] fragmenter(char sep, String s) {
+		String[] result;
+		int compteur = 0;
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == sep) {
+				compteur++;
+			}
+		}
+		int nobmreFragments = compteur + 1;
+		result = new String[nobmreFragments];
+
+		String mot;
+		int start = 0;
+		int positionLibre = 0;
+		for (int i = 0; i <= s.length(); i++) {
+			if (i == s.length() || s.charAt(i) == sep) {
+				int positionSeparateur = i;
+				mot = s.substring(start, positionSeparateur);
+				result[positionLibre] = mot;
+				positionLibre++;
+				start = positionSeparateur + 1;
+
+			}
+		}
+		return result;
+	}
 }
