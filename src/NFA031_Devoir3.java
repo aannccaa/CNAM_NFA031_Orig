@@ -24,19 +24,21 @@ public class NFA031_Devoir3 {
 
 		// afficher le tableau introduit
 		String tableauResultatsConvertit = convertirTableauEnString(tableauResultats);
+		System.out.println("Les valeurs introduites pour les lancers par sportif sont : ");
 		System.out.println(tableauResultatsConvertit);
-		
+
 		double[] moyenneSportifs = calculerMoyenneSportif(tableauResultats);
 		System.out.println("Moyennes des sportifs : " + convertirTableauEnString(moyenneSportifs));
-		
+
 		// afficher le maximum des moyennes
 		double maxMoyennes = maxElements(moyenneSportifs);
 		System.out.format("Le max des moyennes est : %.2f \n", maxMoyennes);
-		
+
 		// afficher la liste des sportifs ayant atteint le max des moyennes
 		int[] sportifsAtteignantMax = indicesPourValeur(moyenneSportifs, maxMoyennes);
-		System.out.println("La liste des sportifs ayant la moyenne maximale: " + convertirTableauEnString(sportifsAtteignantMax));
-		
+		System.out.println(
+				"La liste des sportifs ayant la moyenne maximale: " + convertirTableauEnString(sportifsAtteignantMax));
+
 	}
 
 	//
@@ -50,8 +52,10 @@ public class NFA031_Devoir3 {
 
 			}
 		}
+
 		// creer le tableau resultat
 		int[] indices = new int[n];
+
 		// parcourir le tableau des valeurs pour remplir le tableau des indices
 		int positionLibre = 0;
 		for (int i = 0; i < tab.length; i++) {
@@ -113,6 +117,7 @@ public class NFA031_Devoir3 {
 		return max;
 	}
 
+	// calculer la somme des elements d'un tableau
 	public static double sommeElements(double[] tab) {
 		double somme = 0;
 		for (int i = 0; i < tab.length; i++) {
@@ -149,17 +154,17 @@ public class NFA031_Devoir3 {
 		}
 		return result + "}";
 	}
-	
-	// convertir le tableau de integers 1 dimension dans un string
-		public static String convertirTableauEnString(int[] tab) {
-			String result = "{";
-			String separateur = "";
-			for (int i = 0; i < tab.length; i++) {
 
-				result = result + separateur + tab[i];
-				separateur = ";";
-			}
-			return result + "}";
+	// convertir le tableau de integers 1 dimension dans un string
+	public static String convertirTableauEnString(int[] tab) {
+		String result = "{";
+		String separateur = "";
+		for (int i = 0; i < tab.length; i++) {
+
+			result = result + separateur + tab[i];
+			separateur = ";";
 		}
+		return result + "}";
+	}
 
 }
