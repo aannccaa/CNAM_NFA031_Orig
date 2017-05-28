@@ -8,12 +8,16 @@ public class Stringuri {
 		testsOK = testCountChar() && testsOK;
 		testsOK = testDistinctChars() && testsOK;
 		testsOK = testExtractNb() && testsOK;
+		testsOK = testAllignNumberToRight() && testsOK;
 
 		if (testsOK) {
 			System.out.println("Tests OK");
 		} else {
 			System.out.println("Tests NOK");
 		}
+		
+		String result = printMatrix(10,10,1);
+		System.out.println(result);
 	}
 
 	// pt un string dat, gaseste positia unui character, Returneaza -1 daca nu
@@ -205,9 +209,11 @@ public class Stringuri {
 
 		for (int i = 0; i < s.length(); i++) {
 			char currentChar = s.charAt(i);
-			// transforma un char in int prin scaderea cu '0', ce reprezinta codul ascii al lui 0 = 48
-			//int valChar = currentChar - '0';
-			//int valChar = Character.getNumericValue(currentChar) - Character.getNumericValue('0');
+			// transforma un char in int prin scaderea cu '0', ce reprezinta
+			// codul ascii al lui 0 = 48
+			// int valChar = currentChar - '0';
+			// int valChar = Character.getNumericValue(currentChar) -
+			// Character.getNumericValue('0');
 			int valChar = Character.digit(currentChar, 10);
 			int exponent = s.length() - 1 - i;
 			result = result + valChar * power(10, exponent);
@@ -264,4 +270,137 @@ public class Stringuri {
 		return testsOK;
 	}
 
+	public static boolean testAllignNumberToRight() {
+		int nb;
+		int width;
+		String expected;
+		String current;
+		boolean testsOK = true;
+
+		// test1
+		nb = 301;
+		width = 6;
+		expected = "   301";
+		current = allignNumberToRight(nb, width);
+
+		if (!expected.equals(current)) {
+			testsOK = false;
+			System.out.format("E: '%s' ; C : '%s' ; nb: %d\n", expected, current, nb);
+
+		}
+
+		// test2
+		nb = 30;
+		width = 0;
+		expected = "";
+		current = allignNumberToRight(nb, width);
+
+		if (!expected.equals(current)) {
+			testsOK = false;
+			System.out.format("E: '%s' ; C : '%s' ; nb: %d\n", expected, current, nb);
+
+		}
+
+		// test3
+		nb = 301;
+		width = 2;
+		expected = "##";
+		current = allignNumberToRight(nb, width);
+
+		if (!expected.equals(current)) {
+			testsOK = false;
+			System.out.format("E: '%s' ; C : '%s' ; nb: %d\n", expected, current, nb);
+
+		}
+		return testsOK;
+	}
+
+	// umple un string cu un caracter dat, de n ori.
+	public static String fill(char c, int n) {
+		String result = "";
+		for (int i = 0; i < n; i++) {
+			result = result + c;
+		}
+
+		return result;
+	}
+
+	// formateaza un numar intreg la dreapta, inserand spatii la stanga asa
+	// incat latimea sa fie egala cu un parametru dat
+	public static String allignNumberToRight(int nb, int width) {
+		String nbAsString = "" + nb;
+		int leftSpaces = width - nbAsString.length();
+		String left = "";
+		String result;
+
+		// cand incape
+		if (leftSpaces >= 0) {
+			left = fill(' ', leftSpaces);
+			// for (int i = 0; i < leftSpaces; i++) {
+			// left = left + " ";
+			// }
+			result = left + nbAsString;
+
+		} else {
+			// cand nu incape, toata latimea width se umple cu #
+			left = fill('#', width);
+			// for (int i = 0; i < width; i++) {
+			//
+			// left = left + "#";
+			// }
+			result = left;
+
+		}
+
+		return result;
+	}
+
+	// Ecrivez un programme qui affiche un carre de 10 lignes et 10 colonnes o ´
+	// u la premi ` ere cas contient 1 et `
+	// ensuite chaque case contient 1 de plus que la precedente.
+//	1 2 3 4 5 6 7 8 9 10
+//	11 12 13 14 15 16 17 18 19 20
+//	21 22 23 24 25 26 27 28 29 30
+//	31 32 33 34 35 36 37 38 39 40
+//	41 42 43 44 45 46 47 48 49 50
+//	51 52 53 54 55 56 57 58 59 60
+//	61 62 63 64 65 66 67 68 69 70
+//	71 72 73 74 75 76 77 78 79 80
+//	81 82 83 84 85 86 87 88 89 90
+//	91 92 93 94 95 96 97 98 99 100
+
+	
+
+	public static String printMatrix (int nbLignes, int nbCol, int firstNb){
+		String result="";
+		//
+	int maxNb = nbLignes*nbCol+firstNb-1;
+	int maxNbWidth = (maxNb + "").length();
+		
+		for (int i=0; i<nbCol; i++){
+			String separateur = "";
+			for (int j=0; j<nbLignes; j++){
+				result = result + separateur + allignNumberToRight(firstNb,maxNbWidth);
+				separateur = " ";
+				firstNb++;
+			}
+			result = result + "\n";
+		}
+		return result;
+	}
+	
+/*	// Ecrivez un programme qui fasse un petit dessin de ce genre :
+	****
+	 **
+	****
+	 **
+	****
+	 **
+	****
+	Une ligne sur deux, il y a 4 etoiles, sur les autres lignes, il y en a deux, d ´ ecal ´ ees d’un espace. ´
+	Dans le programme le nombre de lignes affichee est entr ´ e au clavier. Le dessin ci-dessus repr ´ esente le ´
+	cas ou ce nombre vaut 7.
+*/	
+	
+	
 }
