@@ -56,7 +56,8 @@ public class NFA031_recap2 {
 
 		return result;
 	}
-	
+
+	/*
 	public static int[][] extractPlateaux(char[] tab) {
 		int nbPlateaux = compterPlateaux(tab);
 		int[][] tabPlateaux= new int[nbPlateaux][2];
@@ -80,7 +81,7 @@ public class NFA031_recap2 {
 
 		return result;
 	}
-
+*/
 	public static int compterPlateaux2(char[] tab, int start) {
 		if(start >= tab.length -1){
 			return 0;

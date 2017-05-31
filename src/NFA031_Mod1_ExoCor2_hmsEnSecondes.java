@@ -27,16 +27,16 @@ convertit le tout en secondes et affiche le total.
  */
 
 public class NFA031_Mod1_ExoCor2_hmsEnSecondes {
-public static void main (String[] arg) {
-	int h,m,s,c;
-	System.out.print("Donner le nombre d'heures :");
-	h = Lire.i();
-	System.out.print("Donner le nombre de minutes: ");
-	m = Lire.i();
-	System.out.print("Donner le nombre de secondes :");
-	s = Lire.i();
-	c = s + m*60 + h*60*60;
-	System.out.print("Cela fait :" + c + " secondes.");
-	
-}
+	public static void main(String[] arg) {
+		int h, m, s, c;
+		System.out.print("Donner le nombre d'heures :");
+		h = Lire.i();
+		System.out.print("Donner le nombre de minutes: ");
+		m = Lire.i();
+		System.out.print("Donner le nombre de secondes :");
+		s = Lire.i();
+		c = s + m * 60 + h * 60 * 60;
+		System.out.print("Cela fait :" + c + " secondes.");
+
+	}
 }

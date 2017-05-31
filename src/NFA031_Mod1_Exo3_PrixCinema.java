@@ -7,13 +7,13 @@ de 4 euros . Le nombre de séances est donné en mode conversationnel par
  */
 
 public class NFA031_Mod1_Exo3_PrixCinema {
-	public static void main (String[] arg) {
-	int nombreSeances;
-	double prixTotal;
-	System.out.print("Donner le nombre de séances :");
-	nombreSeances = Lire.i();
-	prixTotal = 10 + 4*nombreSeances;
-	System.out.println("Le prix à payer est : " + prixTotal);
-	
+	public static void main(String[] arg) {
+		int nombreSeances;
+		double prixTotal;
+		System.out.print("Donner le nombre de séances :");
+		nombreSeances = Lire.i();
+		prixTotal = 10 + 4 * nombreSeances;
+		System.out.println("Le prix à payer est : " + prixTotal);
+
 	}
 }

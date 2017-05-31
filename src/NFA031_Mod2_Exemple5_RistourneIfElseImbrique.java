@@ -18,7 +18,7 @@ public class NFA031_Mod2_Exemple5_RistourneIfElseImbrique {
 			System.out.format("Le client doit payer : %.2f euros \n", prix);
 		} else {
 			if (prix < 500) {
-				prix = prix - prix * 5/100;
+				prix = prix - prix * 5 / 100;
 				System.out.print("Ristourne de 5% appliquée. ");
 				System.out.format("Le client doit payer: %.2f euros \n", prix);
 			} else {

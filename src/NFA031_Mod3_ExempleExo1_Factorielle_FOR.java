@@ -17,7 +17,7 @@ public class NFA031_Mod3_ExempleExo1_Factorielle_FOR {
 			fact_n = fact_n * i;
 		}
 		
-		System.out.println("n ! = " + fact_n);
+		System.out.format("%d ! = %d",n, fact_n);
 	}
 
 }
