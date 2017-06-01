@@ -9,7 +9,7 @@ b) Compléter le code pour qu'il affiche les livres publiés par un éditeur donné,
 Le code devra être rédigé de façon telle que l'utilisateur puisse effectuer autant de demandes qu'il le souhaite.
 */
 
-public class NFA031_Devoir4 {
+public class NFA031_Devoir4_cata {
 	public static void main(String[] args) {
 		boolean testEnDur = false;
 		String[] tab = enregistrerLivres(testEnDur);
