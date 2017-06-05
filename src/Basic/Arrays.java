@@ -1,11 +1,5 @@
 package Basic;
 
-import javax.swing.table.TableColumnModel;
-
-/*
-
-*/
-
 public class Arrays {
 	public static void main(String[] args) {
 		int[] tabOrig = { 2, 1, 6, 0 };
@@ -85,15 +79,15 @@ public class Arrays {
 
 	public static int[] concatArrays(int[] tab1, int[] tab2) {
 		int[] tabConcat = new int[tab1.length + tab2.length];
-		int offsetIndex;
+		int offsetIndexTab2;
 
 		for (int i = 0; i < tab1.length; i++) {
 			tabConcat[i] = tab1[i];
 		}
-		offsetIndex = tab1.length;
+		offsetIndexTab2 = tab1.length;
 
 		for (int i = 0; i < tab2.length; i++) {
-			tabConcat[i + offsetIndex] = tab2[i];
+			tabConcat[i + offsetIndexTab2] = tab2[i];
 		}
 
 		return tabConcat;

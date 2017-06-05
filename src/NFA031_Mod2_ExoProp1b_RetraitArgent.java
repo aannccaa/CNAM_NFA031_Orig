@@ -17,7 +17,7 @@ public class NFA031_Mod2_ExoProp1b_RetraitArgent {
 			System.out.print("Opération non authorisée. Solde du compte insufisant !");
 		} else {
 
-			System.out.print("Quelle est le montant que vous voulez retirer? :");
+			System.out.print("Quel est le montant que vous voulez retirer? :");
 			mntRetrait = Lire.d();
 
 			if (soldeCompte >= mntRetrait) {
