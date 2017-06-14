@@ -167,6 +167,8 @@ public class Stringuri_recap {
 	// functie ce introduce la stanga unui string un caract care se repeta, asa
 	// incat stringul total sa
 	// aiba anumita lungime
+	
+	
 
 	// extrage dans un string[] suite de caractere succesive ex (BCDETDE => BCDE
 	// si DE)
