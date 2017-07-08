@@ -21,8 +21,8 @@ semestre .
 public class NFA031_Exam1_2017_Ex4 {
 
 	public static void main(String[] args) {
-		int nbTypesVoiture = 4;
-		int nbMois = 6;
+		//int nbTypesVoiture = 4;
+		//int nbMois = 6;
 		int[][] tab = { { 0, 0, 0, 0, 0, 0 }, { 1, 1, 1, 1, 1, 1 }, { 2, 2, 2, 2, 2, 2 }, { 1, 2, 3, 4, 5, 6 } };
 
 		// a)
