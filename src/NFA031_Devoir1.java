@@ -1,4 +1,4 @@
-﻿/*
+/*
 NFA031  Devoir numéro 1 du contrôle continu
 
 Un météorologue veut faire un programme pour calculer des moyennes journalières de températures. 
