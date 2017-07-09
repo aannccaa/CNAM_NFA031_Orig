@@ -1,19 +1,19 @@
-/*
-NFA031  Devoir numéro 1 du contrôle continu
+ï»¿/*
+NFA031  Devoir numÃ©ro 1 du contrÃ´le continu
 
-Un météorologue veut faire un programme pour calculer des moyennes journalières de températures. 
-Pour calculer une moyenne journalière, il procède à 4 relevés: à 9H, à 13H, à 17H et à 20H.
+Un mÃ©tÃ©orologue veut faire un programme pour calculer des moyennes journaliÃ¨res de tempÃ©ratures. 
+Pour calculer une moyenne journaliÃ¨re, il procÃ¨de Ã  4 relevÃ©s: Ã  9H, Ã  13H, Ã  17H et Ã  20H.
 
-a) Ecrire un programme qui permet à ce météorologue de saisir les données d'un jour, 
-afin de calculer la moyenne des températures de ce jour.
+a) Ecrire un programme qui permet Ã  ce mÃ©tÃ©orologue de saisir les donnÃ©es d'un jour, 
+afin de calculer la moyenne des tempÃ©ratures de ce jour.
 
-b) Compléter le programme précédent afin que le code écrit à la question a) puisse être répété 
-autant de fois que le souhaite le météorologue. 
+b) ComplÃ©ter le programme prÃ©cÃ©dent afin que le code Ã©crit Ã  la question a) puisse Ãªtre rÃ©pÃ©tÃ© 
+autant de fois que le souhaite le mÃ©tÃ©orologue. 
 
-c) Compléter le programme afin qu'il puisse afficher, après la fin des saisies, 
+c) ComplÃ©ter le programme afin qu'il puisse afficher, aprÃ¨s la fin des saisies, 
 la valeur de la moyenne la plus basse et la valeur de la moyenne la plus haute.
 
-Remarque: pour résoudre ce devoir, écrire un seul programme au final, qui résoudra toutes les questions posées. 
+Remarque: pour rÃ©soudre ce devoir, Ã©crire un seul programme au final, qui rÃ©soudra toutes les questions posÃ©es. 
  */
 
 public class NFA031_Devoir1 {
@@ -24,21 +24,21 @@ public class NFA031_Devoir1 {
 		int compteur = 0;
 		
 		do {
-			System.out.print("Donner la temperature à 9H: ");
+			System.out.print("Donner la temperature Ã  9H: ");
 			tempReleve = Lire.d();
 			sommeTempJour = tempReleve;
-			System.out.print("Donner la temperature à 13H: ");
+			System.out.print("Donner la temperature Ã  13H: ");
 			tempReleve = Lire.d();
 			sommeTempJour = sommeTempJour + tempReleve;
-			System.out.print("Donner la temperature à 17H: ");
+			System.out.print("Donner la temperature Ã  17H: ");
 			tempReleve = Lire.d();
 			sommeTempJour = sommeTempJour + tempReleve;
-			System.out.print("Donner la temperature à 20H: ");
+			System.out.print("Donner la temperature Ã  20H: ");
 			tempReleve = Lire.d();
 			sommeTempJour = sommeTempJour + tempReleve;
 			moyenneTempJour = sommeTempJour / 4;
 			compteur = compteur + 1;
-			System.out.format("La moyenne des temperatures du jour %d est de %.2f °C \n", compteur, moyenneTempJour);
+			System.out.format("La moyenne des temperatures du jour %d est de %.2f Â°C \n", compteur, moyenneTempJour);
 
 			if (moyenneTempJour <= moyenneMin) {
 				moyenneMin = moyenneTempJour;
@@ -51,9 +51,9 @@ public class NFA031_Devoir1 {
 			choix = Character.toUpperCase(Lire.c());
 		} while (choix == 'O');
 
-		System.out.println("Vous avez enregistré des temperatures pour " + compteur + " jours.");
-		System.out.println("La moyenne la plus basse = " + moyenneMin + " °C.");
-		System.out.println("La moyenne la plus haute = " + moyenneMax + " °C.");
+		System.out.println("Vous avez enregistrÃ© des temperatures pour " + compteur + " jours.");
+		System.out.println("La moyenne la plus basse = " + moyenneMin + " Â°C.");
+		System.out.println("La moyenne la plus haute = " + moyenneMax + " Â°C.");
 		System.out.println("FIN DU PROGRAMME");
 	}
 
