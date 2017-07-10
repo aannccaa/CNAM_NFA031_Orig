@@ -1,6 +1,6 @@
-/*
+﻿/*
 Exercice 3
-Indiquez les r�sultats fournis par le code suivant :
+Indiquez les résultats fournis par le code suivant :
 */
 
 public class NFA031_recap3

@@ -1,4 +1,4 @@
-public class NFA031_Mod1_Exo1_Cube {
+﻿public class NFA031_Mod1_Exo1_Cube {
 	public static void main(String[] arg) {
 		double a, b;
 		System.out.print("Donner un nombre : ");

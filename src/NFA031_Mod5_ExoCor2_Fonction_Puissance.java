@@ -1,6 +1,6 @@
-/*
-Ecrire une fonction qui calcule l’élévation d’un nombre a à la puissance b:
- a^b, où a est un réel strictement positif et b un entier strictement positif.
+ï»¿/*
+Ecrire une fonction qui calcule lâ€™Ã©lÃ©vation dâ€™un nombre a Ã  la puissance b:
+ a^b, oÃ¹ a est un rÃ©el strictement positif et b un entier strictement positif.
  On convient d'appeller a "mantisse" et b "exposant".
  */
 
@@ -16,14 +16,14 @@ public class NFA031_Mod5_ExoCor2_Fonction_Puissance {
 
 	}
 
-	// fonction qui demande à l'utilisateur un nombre réel > 0:
+	// fonction qui demande Ã  l'utilisateur un nombre rÃ©el > 0:
 	public static double introduireReelStrictementPositif(double nombreReelStrictementPositif) {
 		boolean estStrictementPositif;
 		do {
-			System.out.print("Donner un numéro a, réel strictement positif :");
+			System.out.print("Donner un numÃ©ro a, rÃ©el strictement positif :");
 			nombreReelStrictementPositif = Lire.d();
 			if (nombreReelStrictementPositif <= 0) {
-				System.out.println("Le numéro inseré n'est pas strictement positif. ");
+				System.out.println("Le numÃ©ro inserÃ© n'est pas strictement positif. ");
 				estStrictementPositif = false;
 			} else {
 				estStrictementPositif = true;
@@ -34,14 +34,14 @@ public class NFA031_Mod5_ExoCor2_Fonction_Puissance {
 		return nombreReelStrictementPositif;
 	}
 
-	// fonction qui demande à l'utilisateur un nombre entier > 0:
+	// fonction qui demande Ã  l'utilisateur un nombre entier > 0:
 	public static int introduireEntierStrictementPositif(int nombreEntierStrictementPositif) {
 		boolean estStrictementPositif;
 		do {
-			System.out.print("Donner un numéro b, entier strictement positif :");
+			System.out.print("Donner un numÃ©ro b, entier strictement positif :");
 			nombreEntierStrictementPositif = Lire.i();
 			if (nombreEntierStrictementPositif <= 0) {
-				System.out.println("Le numéro inseré n'est pas strictement positif. ");
+				System.out.println("Le numÃ©ro inserÃ© n'est pas strictement positif. ");
 				estStrictementPositif = false;
 			} else {
 				estStrictementPositif = true;
@@ -52,7 +52,7 @@ public class NFA031_Mod5_ExoCor2_Fonction_Puissance {
 		return nombreEntierStrictementPositif;
 	}
 
-	// fonction qui calcule la puissance de 2 nombres (mantisse suposée à être un nb réel,
+	// fonction qui calcule la puissance de 2 nombres (mantisse suposÃ©e Ã  Ãªtre un nb rÃ©el,
 	// l'exposant un nb. entier):
 	public static double calculerPuissance(double mantisse, int exposant) {
 		double puissance = 1;

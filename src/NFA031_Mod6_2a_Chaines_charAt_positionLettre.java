@@ -1,5 +1,5 @@
-/*
-pour un mot donnée, trouver la lettre qui se trouve sur une position choisie par l'utilisateur
+ï»¿/*
+pour un mot donnÃ©e, trouver la lettre qui se trouve sur une position choisie par l'utilisateur
  */
 public class NFA031_Mod6_2a_Chaines_charAt_positionLettre {
 
@@ -17,7 +17,7 @@ public class NFA031_Mod6_2a_Chaines_charAt_positionLettre {
 		positionCharactereDansMot = Lire.i();
 		characterDansMot = motIntroduit.charAt(positionCharactereDansMot);
 		
-		System.out.println("Sur la position " + positionCharactereDansMot + " se trouve le charactère " + characterDansMot);
+		System.out.println("Sur la position " + positionCharactereDansMot + " se trouve le charactÃ¨re " + characterDansMot);
 		
 	}
 

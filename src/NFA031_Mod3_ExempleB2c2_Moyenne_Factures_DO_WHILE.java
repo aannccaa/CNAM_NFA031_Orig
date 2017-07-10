@@ -1,9 +1,9 @@
-/*
-écrivons un programme pour enregistrer des montants de factures. 
-Ce programme devra à la fin indiquer la moyenne de factures enregistrées.
-Pour indiquer l'évolution de la moyenne au fur et à mesure de la rentrée des données, 
+ï»¿/*
+Ã©crivons un programme pour enregistrer des montants de factures. 
+Ce programme devra Ã  la fin indiquer la moyenne de factures enregistrÃ©es.
+Pour indiquer l'Ã©volution de la moyenne au fur et Ã  mesure de la rentrÃ©e des donnÃ©es, 
 placer la formule de la moyenne dans la boucle. 
-Utiliser une boucle 'Faire (DO)...Tant que (WHILE)...' afin d'être assuré que 
+Utiliser une boucle 'Faire (DO)...Tant que (WHILE)...' afin d'Ãªtre assurÃ© que 
 l'utilisateur du programme rentre au-moins une valeur.
  */
 
@@ -15,7 +15,7 @@ public class NFA031_Mod3_ExempleB2c2_Moyenne_Factures_DO_WHILE {
 		int compteur = 1;
 
 		do {
-			System.out.print("Donner le montant de la facture n° " + compteur + " : ");
+			System.out.print("Donner le montant de la facture nÂ° " + compteur + " : ");
 			mntFacture = Lire.d();
 			sommeFactures = sommeFactures + mntFacture;
 			moyenneFactures = sommeFactures / compteur;
@@ -23,7 +23,7 @@ public class NFA031_Mod3_ExempleB2c2_Moyenne_Factures_DO_WHILE {
 				System.out.format("La moyenne de ces %d factures = %.2f euros \n", compteur, moyenneFactures);
 				;
 			} else {
-				System.out.format("%d facture enregistrée, la moyenne vaut %.2f euros \n", compteur, moyenneFactures);
+				System.out.format("%d facture enregistrÃ©e, la moyenne vaut %.2f euros \n", compteur, moyenneFactures);
 			}
 			System.out.print("Voulez-vous enregistrer une autre facture (O/N) ? ");
 			choix = Character.toUpperCase(Lire.c());

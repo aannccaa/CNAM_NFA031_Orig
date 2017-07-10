@@ -1,5 +1,5 @@
-/*
-extraire une sous-chaîne d’une chaîne.
+ï»¿/*
+extraire une sous-chaÃ®ne dâ€™une chaÃ®ne.
  */
 public class NFA031_Mod6_2d_Chaines_substring_ExtractionString {
 
@@ -10,7 +10,7 @@ public class NFA031_Mod6_2d_Chaines_substring_ExtractionString {
 		String chaineExtraite;
 		
 		chaineExtraite = chaineIntroduite.substring(indiceInf,indiceSup);
-		System.out.println("La chaine après extraction : " + chaineExtraite);
+		System.out.println("La chaine aprÃ¨s extraction : " + chaineExtraite);
 		
 
 	}

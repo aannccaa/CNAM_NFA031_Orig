@@ -1,9 +1,9 @@
-/*
-Rentrer dans un tableau à 2 dimensions les données suivantes:
+ï»¿/*
+Rentrer dans un tableau Ã  2 dimensions les donnÃ©es suivantes:
 {7,  3,  4}
 {2,  8,  9}
-Demander à l’utilisateur de rentrer d’abord tous les éléments de la ligne 1 
-et ensuite de rentrer tous les éléments de la ligne 2.
+Demander Ã  lâ€™utilisateur de rentrer dâ€™abord tous les Ã©lÃ©ments de la ligne 1 
+et ensuite de rentrer tous les Ã©lÃ©ments de la ligne 2.
 Faire afficher la somme d'une ligne du tableau.
 Faire afficher la somme d'une colonne du tableau.
  */
@@ -31,7 +31,7 @@ public class NFA031_Mod4_Cc_SommeValeursLigneColTableau {
 		}
 		System.out.println("La somme des entiers du tableau est: " + sommeEntiersTableau);
 
-		// Calculer la somme des entiers d'une ligne i demandée par l'utilisateur:
+		// Calculer la somme des entiers d'une ligne i demandÃ©e par l'utilisateur:
 		System.out.print("Donner l'indice de la ligne dont vous souhaitez la somme des valeurs : ");
 		i = Lire.i();
 		int sommeEntiersLigne = 0;
@@ -40,7 +40,7 @@ public class NFA031_Mod4_Cc_SommeValeursLigneColTableau {
 		}
 		System.out.println("La somme des entiers de la ligne " + i + " = " + sommeEntiersLigne);
 
-		// Calculer la somme des entiers d'une colonne j demandée par
+		// Calculer la somme des entiers d'une colonne j demandÃ©e par
 		// l'utilisateur:
 		System.out.print("Donner l'indice de la colonne dont vous souhaitez la somme des valeurs : ");
 		j = Lire.i();

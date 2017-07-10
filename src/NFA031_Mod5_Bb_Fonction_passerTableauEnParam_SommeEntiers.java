@@ -1,7 +1,7 @@
-/*
+ï»¿/*
 Ecrire un program avec une fonctionne qui passe un tableau en paramettre et qui 
-demande 5 entiers à un utilisateur et les stocke dans un tableau. 
-La fonction ‘somme’ reçoit ce tableau en paramètre et retourne la somme des éléments du tableau :
+demande 5 entiers Ã  un utilisateur et les stocke dans un tableau. 
+La fonction â€˜sommeâ€™ reÃ§oit ce tableau en paramÃ¨tre et retourne la somme des Ã©lÃ©ments du tableau :
 */
 
 public class NFA031_Mod5_Bb_Fonction_passerTableauEnParam_SommeEntiers {
@@ -24,11 +24,11 @@ public class NFA031_Mod5_Bb_Fonction_passerTableauEnParam_SommeEntiers {
 	public static int[] lireTableau(String nomTableau, int longueurTableau) {
 		int tableau[] = new int[longueurTableau];
 		if (nomTableau != null && nomTableau != "") {
-			System.out.println("Introduire la liste des entiers appellée  " + nomTableau);
+			System.out.println("Introduire la liste des entiers appellÃ©e  " + nomTableau);
 		}
 		
 		for (int i = 0; i < longueurTableau; i++) {
-			System.out.print("Donner l'entier numéro: " + (i + 1) + " : ");
+			System.out.print("Donner l'entier numÃ©ro: " + (i + 1) + " : ");
 			tableau[i] = Lire.i();
 		}
 		return tableau;

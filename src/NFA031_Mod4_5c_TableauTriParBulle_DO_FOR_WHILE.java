@@ -1,4 +1,4 @@
-import org.omg.CORBA.portable.ApplicationException;
+ï»¿import org.omg.CORBA.portable.ApplicationException;
 
 public class NFA031_Mod4_5c_TableauTriParBulle_DO_FOR_WHILE {
 
@@ -16,11 +16,11 @@ public class NFA031_Mod4_5c_TableauTriParBulle_DO_FOR_WHILE {
 			enDesordre = false;//adica sortate pana la proba contrarie;
 
 			for (i = 0; i < longueurTableau - 1; i++) {
-				// Teste si 2 éléments successifs sont dans le bon ordre ou non
+				// Teste si 2 Ã©lÃ©ments successifs sont dans le bon ordre ou non
 				
 
 				if (T[i] > T[i + 1]) {
-					// s'ils ne le sont pas, on échange leurs positions
+					// s'ils ne le sont pas, on Ã©change leurs positions
 					temp = T[i];
 					T[i] = T[i + 1];
 					T[i + 1] = temp;
@@ -29,8 +29,8 @@ public class NFA031_Mod4_5c_TableauTriParBulle_DO_FOR_WHILE {
 			}
 		}
 		while(enDesordre);//adica nesortate;
-		// afficher le tableau trié:
-		System.out.print("Le tableau trié par ordre croissante: [");
+		// afficher le tableau triÃ©:
+		System.out.print("Le tableau triÃ© par ordre croissante: [");
 		separateur = "";
 		for (i = 0; i < longueurTableau; i++) {
 			System.out.print(separateur + T[i]);

@@ -1,8 +1,8 @@
-/*
+ï»¿/*
 Exercice 1
 Ecrire un programme qui retourne la factorielle de n quand on lui fournit la
-valeur de n. La factorielle d’un nombre entier n est le produit des entiers
-successifs de 1 à n . On écrit : n ! = factorielle de n = 1*2*3*.......*n
+valeur de n. La factorielle dâ€™un nombre entier n est le produit des entiers
+successifs de 1 Ã  n . On Ã©crit : n ! = factorielle de n = 1*2*3*.......*n
 Par exemple : 5 ! = 1*2*3*4*5 = 120
  */
 public class NFA031_Mod3_ExempleExo1_Factorielle_FOR {

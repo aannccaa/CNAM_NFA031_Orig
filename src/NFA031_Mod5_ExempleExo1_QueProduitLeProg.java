@@ -1,5 +1,5 @@
-/*
-Donnez les affichages produits à l'exécution par le programme suivant:
+ï»¿/*
+Donnez les affichages produits Ã  l'exÃ©cution par le programme suivant:
 */
 
 public class NFA031_Mod5_ExempleExo1_QueProduitLeProg {
@@ -34,15 +34,15 @@ public class NFA031_Mod5_ExempleExo1_QueProduitLeProg {
 	public static void main(String[] args) {
 		int[] tab = { 1, 3, 5 };
 
-		pm(3, 10, tab); /* étape a) */
+		pm(3, 10, tab); /* Ã©tape a) */
 
-		af(tab); /* étape b) */
+		af(tab); /* Ã©tape b) */
 
 		System.out.println(" ");
 
-		pm(0, 3, tab); /* étape c) */
+		pm(0, 3, tab); /* Ã©tape c) */
 
-		af(tab); /* étape d) */
+		af(tab); /* Ã©tape d) */
 
 		System.out.println(" ");
 

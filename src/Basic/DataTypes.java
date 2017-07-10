@@ -1,4 +1,4 @@
-package Basic;
+ï»¿package Basic;
 
 public class DataTypes {
 
@@ -290,7 +290,7 @@ public class DataTypes {
 
 	}
 
-	// remplir un tableau d'entiers, de 1 à un numéro donné (en ordre
+	// remplir un tableau d'entiers, de 1 Ã  un numÃ©ro donnÃ© (en ordre
 	// croissante/decroissante):
 	public static int[] fillArray(int lungime, boolean isCrescator) {
 

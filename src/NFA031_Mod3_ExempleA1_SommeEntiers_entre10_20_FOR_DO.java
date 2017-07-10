@@ -1,4 +1,4 @@
-/*
+﻿/*
 Calculez la somme des entiers compris entre 10 et 20,
 en utilisant la boucle : Pour (for)...
 */

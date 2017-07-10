@@ -1,6 +1,6 @@
-/*
+ï»¿/*
 Exercice 2
-Tracez l'exécution du programme suivant à l'aide d'un tableau d'évolution des variables :
+Tracez l'exÃ©cution du programme suivant Ã  l'aide d'un tableau d'Ã©volution des variables :
  */
 
 public class NFA031_Mod3_ExempleExo2_enigme_TracerExecProgram {

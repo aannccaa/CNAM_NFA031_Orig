@@ -1,8 +1,8 @@
-/*
-Ecrire un programme qui calcule le prix à payer pour assister à n séances de 
-cinéma , en supposant qu’il y a un abonnement de 10 euros et un prix de séance  
-de 4 euros . Le nombre de séances est donné en mode conversationnel par
- l’utilisateur et le programme devra afficher le résultat calculé .
+ï»¿/*
+Ecrire un programme qui calcule le prix Ã  payer pour assister Ã  n sÃ©ances de 
+cinÃ©ma , en supposant quâ€™il y a un abonnement de 10 euros et un prix de sÃ©ance  
+de 4 euros . Le nombre de sÃ©ances est donnÃ© en mode conversationnel par
+ lâ€™utilisateur et le programme devra afficher le rÃ©sultat calculÃ© .
 
  */
 
@@ -10,10 +10,10 @@ public class NFA031_Mod1_Exo3_PrixCinema {
 	public static void main(String[] arg) {
 		int nombreSeances;
 		double prixTotal;
-		System.out.print("Donner le nombre de séances :");
+		System.out.print("Donner le nombre de sÃ©ances :");
 		nombreSeances = Lire.i();
 		prixTotal = 10 + 4 * nombreSeances;
-		System.out.println("Le prix à payer est : " + prixTotal);
+		System.out.println("Le prix Ã  payer est : " + prixTotal);
 
 	}
 }

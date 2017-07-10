@@ -1,11 +1,11 @@
-/*
-Une classe est composée de 25 élèves. Chaque élève passe un examen de trois matières:
-mathématique (3), français (2) et informatique (5). 
-Ecrire un algorithme pour réaliser les étapes suivantes:
-a) Saisir les notes, puis calculer les moyennes des élèves et les ranger dans un tableau .
-b) Parcourir le tableau et afficher une décision d’admission selon que la moyenne de
-l’élève est supérieure ou égale à 10.
-c) Calculer et afficher la moyenne générale de la classe.
+ï»¿/*
+Une classe est composÃ©e de 25 Ã©lÃ¨ves. Chaque Ã©lÃ¨ve passe un examen de trois matiÃ¨res:
+mathÃ©matique (3), franÃ§ais (2) et informatique (5). 
+Ecrire un algorithme pour rÃ©aliser les Ã©tapes suivantes:
+a) Saisir les notes, puis calculer les moyennes des Ã©lÃ¨ves et les ranger dans un tableau .
+b) Parcourir le tableau et afficher une dÃ©cision dâ€™admission selon que la moyenne de
+lâ€™Ã©lÃ¨ve est supÃ©rieure ou Ã©gale Ã  10.
+c) Calculer et afficher la moyenne gÃ©nÃ©rale de la classe.
 */
 
 public class NFA031_Mod4_Exemple2_Tableau {
@@ -17,18 +17,18 @@ public class NFA031_Mod4_Exemple2_Tableau {
 		String decision;
 		double tab[] = new double[nbEleves];
 
-		// calcul moyenne pour chaque élève:
+		// calcul moyenne pour chaque Ã©lÃ¨ve:
 		for (i = 0; i < nbEleves; i++) {
-			System.out.print("Eleve " + (i + 1) + ", donner la note en Mathématique : ");
+			System.out.print("Eleve " + (i + 1) + ", donner la note en MathÃ©matique : ");
 			noteMathEleve = Lire.d();
-			System.out.print("Eleve " + (i + 1) + ", donner la note en Français : ");
+			System.out.print("Eleve " + (i + 1) + ", donner la note en FranÃ§ais : ");
 			noteFraEleve = Lire.d();
 			System.out.print("Eleve " + (i + 1) + ", donner la note en Informatique : ");
 			noteInfoEleve = Lire.d();
 
 			moyenneNotesEleve = (noteMathEleve * coefMath + noteFraEleve * coefFra + noteInfoEleve * coefInfo)
 					/ (coefMath + coefFra + coefInfo);
-			System.out.println("La moyenne des notes de l'elève " + (i + 1) + " = " + moyenneNotesEleve);
+			System.out.println("La moyenne des notes de l'elÃ¨ve " + (i + 1) + " = " + moyenneNotesEleve);
 
 			// Decisions admission si moyenne de l'eleve >=10
 			if (moyenneNotesEleve >= 10) {
@@ -39,13 +39,13 @@ public class NFA031_Mod4_Exemple2_Tableau {
 			System.out.println("=> Eleve " + (i + 1) + ": " + decision);
 			sommeMoyennesEleves = sommeMoyennesEleves + moyenneNotesEleve;
 
-			// ranger les moyennes des élèves dans un tableau:
+			// ranger les moyennes des Ã©lÃ¨ves dans un tableau:
 			tab[i] = moyenneNotesEleve;
 
 		}
 
-		// imprimer le tableau des moyennes des notes des élèves:
-		System.out.print("Le tableau des moyennes des notes des élèves est : [");
+		// imprimer le tableau des moyennes des notes des Ã©lÃ¨ves:
+		System.out.print("Le tableau des moyennes des notes des Ã©lÃ¨ves est : [");
 		String separateur = "";
 		for (i = 0; i < nbEleves; i++) {
 			System.out.print(separateur + tab[i]);
@@ -53,9 +53,9 @@ public class NFA031_Mod4_Exemple2_Tableau {
 		}
 		System.out.println("]");
 
-		// calcul moyenne générale de la classe:
+		// calcul moyenne gÃ©nÃ©rale de la classe:
 		moyenneGenClasse = sommeMoyennesEleves / nbEleves;
-		System.out.println("La moyenne générale de la classe de " + nbEleves + " élèves = " + moyenneGenClasse);
+		System.out.println("La moyenne gÃ©nÃ©rale de la classe de " + nbEleves + " Ã©lÃ¨ves = " + moyenneGenClasse);
 
 	}
 

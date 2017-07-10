@@ -1,5 +1,5 @@
-/*
-Indiquer le résultat de l’exécution du code suivant: 
+ï»¿/*
+Indiquer le rÃ©sultat de lâ€™exÃ©cution du code suivant: 
 */
 
 public class NFA031_Mod4_Exemple3_Tableau {

@@ -1,6 +1,6 @@
-/*
-Ecrire une fonction qui retourne l’élément maximum d’un tableau 
-de 20 entiers reçu en entrée.
+ï»¿/*
+Ecrire une fonction qui retourne lâ€™Ã©lÃ©ment maximum dâ€™un tableau 
+de 20 entiers reÃ§u en entrÃ©e.
  */
 public class NFA031_Mod5_ExoCor3_Fonction_MaxTableauEntiers {
 
@@ -9,7 +9,7 @@ public class NFA031_Mod5_ExoCor3_Fonction_MaxTableauEntiers {
 		int[] tab = remplirTableau(nbEntiers);
 		int maxTableau = calculerMaxEntiersTableau(tab);
 		System.out
-				.println("La valeur maximale des entiers du tableau de " + nbEntiers + " élements est : " + maxTableau);
+				.println("La valeur maximale des entiers du tableau de " + nbEntiers + " Ã©lements est : " + maxTableau);
 
 	}
 
@@ -17,7 +17,7 @@ public class NFA031_Mod5_ExoCor3_Fonction_MaxTableauEntiers {
 	public static int[] remplirTableau(int longueurTableau) {
 		int[] tableau = new int[longueurTableau];
 		for (int i = 0; i < tableau.length; i++) {
-			System.out.print("Donner un nombre entier pour l'élément du tableau d'indice " + i + " : ");
+			System.out.print("Donner un nombre entier pour l'Ã©lÃ©ment du tableau d'indice " + i + " : ");
 			tableau[i] = Lire.i();
 		}
 		return tableau;

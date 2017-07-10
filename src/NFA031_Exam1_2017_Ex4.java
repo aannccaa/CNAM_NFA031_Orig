@@ -1,20 +1,18 @@
-import javax.swing.plaf.synth.SynthSeparatorUI;
-
-/*
+ï»¿/*
 Un garage vend quatre types de voitures , qui sont les suivants : berline , break ,
 monospace et citadine .
-Chaque type de voiture sera repéré par un indice : 0 pour le type berline , 1 pour le
+Chaque type de voiture sera repÃ©rÃ© par un indice : 0 pour le type berline , 1 pour le
 type break , 2 pour le type monospace et 3 pour le type citadine .
-a) Le gérant du garage veut créer un programme pour enregistrer ses ventes mensuelles par
-type de voiture pendant un semestre . Les mois seront repérés par un indice variant de 0 à 5 .
-Pour réaliser cela , déclarer un tableau de dimension 2 qui comportera 4 lignes et 6 colonnes .
-Ecrire un code pour stocker dans la case repérée par la ligne i et la colonne j le nombre de
+a) Le gÃ©rant du garage veut crÃ©er un programme pour enregistrer ses ventes mensuelles par
+type de voiture pendant un semestre . Les mois seront repÃ©rÃ©s par un indice variant de 0 Ã  5 .
+Pour rÃ©aliser cela , dÃ©clarer un tableau de dimension 2 qui comportera 4 lignes et 6 colonnes .
+Ecrire un code pour stocker dans la case repÃ©rÃ©e par la ligne i et la colonne j le nombre de
 voitures de type i vendues pendant le mois j .
-b) Rédiger une fonction qui calcule et affiche le nombre de voitures vendues pendant
-le mois j , j étant un indice de mois fourni par l'utilisateur .
-c) Rédiger une fonction qui calcule et affiche le nombre de voitures de type i vendues
-pendant le semestre , i étant un indice de type de voiture fourni par l'utilisateur .
-d) Rédiger une fonction qui calcule et affiche le nombre de voitures vendues pendant le
+b) RÃ©diger une fonction qui calcule et affiche le nombre de voitures vendues pendant
+le mois j , j Ã©tant un indice de mois fourni par l'utilisateur .
+c) RÃ©diger une fonction qui calcule et affiche le nombre de voitures de type i vendues
+pendant le semestre , i Ã©tant un indice de type de voiture fourni par l'utilisateur .
+d) RÃ©diger une fonction qui calcule et affiche le nombre de voitures vendues pendant le
 semestre .
  */
 

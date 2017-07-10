@@ -1,8 +1,8 @@
-/*
-lorsque un tableau est passé à une fonction, c’est l’adresse du premier élément de ce tableau qui est communiquée
-au tableau, et, du coup, toute modification portant sur le tableau à l’intérieur de la fonction
-sera répercutée sur le tableau d’origine dans le programme principal, et ce la même si le nom
-du tableau est changé dans la fonction.
+ï»¿/*
+lorsque un tableau est passÃ© Ã  une fonction, câ€™est lâ€™adresse du premier Ã©lÃ©ment de ce tableau qui est communiquÃ©e
+au tableau, et, du coup, toute modification portant sur le tableau Ã  lâ€™intÃ©rieur de la fonction
+sera rÃ©percutÃ©e sur le tableau dâ€™origine dans le programme principal, et ce la mÃªme si le nom
+du tableau est changÃ© dans la fonction.
  */
 
 public class NFA031_Mod5_Bb3_Fonctions_passerTableauEnParam {

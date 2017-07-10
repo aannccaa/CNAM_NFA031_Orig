@@ -1,11 +1,11 @@
-/*
+ï»¿/*
 Pour fabriquer un mot de passe, vous convenez de donner 3 nombres entiers, qui ne
-contiennent pas obligatoirement le même nombre de chiffres. Ces 3 nombres: n1, n2
-et n3 seront ensuite séparés par les lettres A et B pour former le mot de passe de la façon
+contiennent pas obligatoirement le mÃªme nombre de chiffres. Ces 3 nombres: n1, n2
+et n3 seront ensuite sÃ©parÃ©s par les lettres A et B pour former le mot de passe de la faÃ§on
 suivante: n1An2Bn3.
-a) Déclarer un tableau 'tab' qui contiendra 3 objets de type String. Ce tableau stockera les
-nombres sous forme de chaines de caractères.
-Supposons que les 3 nombres soient: 12, 7 et 456. Pour saisir ces 3 nombres, l’utilisateur
+a) DÃ©clarer un tableau 'tab' qui contiendra 3 objets de type String. Ce tableau stockera les
+nombres sous forme de chaines de caractÃ¨res.
+Supposons que les 3 nombres soient: 12, 7 et 456. Pour saisir ces 3 nombres, lâ€™utilisateur
 adoptera la disposition suivante: 
 1
 2
@@ -17,10 +17,10 @@ adoptera la disposition suivante:
 6
 *
 
-Ecrire un code pour enregistrer dans le tableau 'tab' les données ainsi disposées.
-b) Ecrire un code pour vérifier les nombres fournis.
-N.B: pour cette vérification, il n’est pas demandé de convertir les nombres
-vers le type ‘int’.
+Ecrire un code pour enregistrer dans le tableau 'tab' les donnÃ©es ainsi disposÃ©es.
+b) Ecrire un code pour vÃ©rifier les nombres fournis.
+N.B: pour cette vÃ©rification, il nâ€™est pas demandÃ© de convertir les nombres
+vers le type â€˜intâ€™.
 c) Ecrire un code pour afficher le mot de passe
  */
 public class NFA031_recap5 {

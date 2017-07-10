@@ -1,7 +1,7 @@
-/*
+ï»¿/*
 Expliquez ce que fait le programme suivant, en faisant un tableau 
-qui retrace l’évolution pas à pas des variables du programme :
-Remarque : ce code ne correspond à aucun problème concret. Son but est de s’entrainer à lire
+qui retrace lâ€™Ã©volution pas Ã  pas des variables du programme :
+Remarque : ce code ne correspond Ã  aucun problÃ¨me concret. Son but est de sâ€™entrainer Ã  lire
 un programme sans faire appel au sens de ce programme.
  */
 

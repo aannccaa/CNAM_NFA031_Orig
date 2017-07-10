@@ -1,7 +1,7 @@
-/*
+ï»¿/*
 Soient a et b deux nombres entiers strictement positifs.
-Ecrire un algorithme qui détermine la puissance de a par b: a^b, 
-à l’aide de multiplications successives.
+Ecrire un algorithme qui dÃ©termine la puissance de a par b: a^b, 
+Ã  lâ€™aide de multiplications successives.
  */
 public class NFA031_Mod3_ExoProp2_Puissance {
 

@@ -1,10 +1,10 @@
-/*
-écrivons un algorithme pour déterminer le montant maximum atteint par les factures 
+ï»¿/*
+Ã©crivons un algorithme pour dÃ©terminer le montant maximum atteint par les factures 
 fournies par l'utilisateur, ainsi que le montant minimum de ces factures.
-Un algorithme possible consiste à initialiser 'max' et 'min' avec la première valeur fournie par l'utilisateur,
-puis à remplacer le contenu de 'max' par toute valeur fournie qui se révèle être plus grande
+Un algorithme possible consiste Ã  initialiser 'max' et 'min' avec la premiÃ¨re valeur fournie par l'utilisateur,
+puis Ã  remplacer le contenu de 'max' par toute valeur fournie qui se rÃ©vÃ¨le Ãªtre plus grande
 que la valeur actuelle de 'max' , ainsi que le contenu de 'min' par toute valeur fournie qui se
-révèle être plus petite que la valeur actuelle de 'min' .
+rÃ©vÃ¨le Ãªtre plus petite que la valeur actuelle de 'min' .
  */
 
 public class NFA031_Mod3_ExempleB2d1_MinMax_Factures_DO_WHILE {
@@ -15,7 +15,7 @@ public class NFA031_Mod3_ExempleB2d1_MinMax_Factures_DO_WHILE {
 		int compteur = 1;
 
 		do {
-			System.out.print("Donner le montant de la facture n° " + compteur + " : ");
+			System.out.print("Donner le montant de la facture nÂ° " + compteur + " : ");
 			mntFacture = Lire.d();
 			if (compteur == 1) {
 				mntFactureMin = mntFacture;

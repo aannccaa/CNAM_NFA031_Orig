@@ -1,9 +1,9 @@
-/*
+ï»¿/*
 Exercice 2
-On souhaite déterminer le prix moyen, le prix le plus cher et le prix le moins cher d’un
-ensemble de produits rangés dans un rayon de magasin. A priori, on ne connaît pas le nombre
+On souhaite dÃ©terminer le prix moyen, le prix le plus cher et le prix le moins cher dâ€™un
+ensemble de produits rangÃ©s dans un rayon de magasin. A priori, on ne connaÃ®t pas le nombre
 de produits.
-Ecrire l’algorithme qui demandera les données nécessaires et affichera le prix moyen, le prix
+Ecrire lâ€™algorithme qui demandera les donnÃ©es nÃ©cessaires et affichera le prix moyen, le prix
 le moins cher et le prix le plus cher.
  */
 
@@ -14,7 +14,7 @@ public class NFA031_Mod3_ExoCor2_PrixMoyenMinMax_DO_WHILE {
 		char choix;
 
 		do {
-			System.out.print("Donner le prix du produit n° " + nbProduits + " : ");
+			System.out.print("Donner le prix du produit nÂ° " + nbProduits + " : ");
 			prix = Lire.d();
 			sommePrix = prix + sommePrix;
 			prixMoyen = sommePrix / nbProduits;

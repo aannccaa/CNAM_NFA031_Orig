@@ -1,14 +1,14 @@
-/*
+ï»¿/*
 Exercice 3
 Ecrire un algorithme qui demande 
 un nombre total de secondes, convertit ce nombre en heures, minutes et secondes. 
-L’affichage sera formaté ainsi : heures :minutes :secondes.
+Lâ€™affichage sera formatÃ© ainsi : heures :minutes :secondes.
 
  */
 public class NFA031_Mod1_ExoCor3_SecondesEnHHMMSS {
 
 	public static void main(String[] args) {
-		int n;  // nb. secondes à rentréer par l'utilisateur
+		int n;  // nb. secondes Ã  rentrÃ©er par l'utilisateur
 		int h, m, s; // heures, minutes, secondes 
 		
 		/*

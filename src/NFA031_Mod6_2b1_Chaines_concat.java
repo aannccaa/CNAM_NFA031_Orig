@@ -1,4 +1,4 @@
-/*
+﻿/*
 Concatener 2 chaines en utilsant la fonction concat
  */
 public class NFA031_Mod6_2b1_Chaines_concat {

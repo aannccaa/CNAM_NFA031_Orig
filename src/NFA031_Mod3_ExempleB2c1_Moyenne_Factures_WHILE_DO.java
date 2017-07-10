@@ -1,6 +1,6 @@
-/*
-écrivons un programme pour enregistrer des montants de factures. 
-Ce programme devra à la fin indiquer la moyenne de factures enregistrées.
+ï»¿/*
+Ã©crivons un programme pour enregistrer des montants de factures. 
+Ce programme devra Ã  la fin indiquer la moyenne de factures enregistrÃ©es.
 Le program suivant utilse une boucle While-Do.
  */
 
@@ -23,10 +23,10 @@ public class NFA031_Mod3_ExempleB2c1_Moyenne_Factures_WHILE_DO {
 		}
 		
 		if (compteur == 0) {
-			System.out.println("Aucune facture enregistrée. ");
+			System.out.println("Aucune facture enregistrÃ©e. ");
 		} else {
 			moyenneFactures = sommeFactures / compteur;
-			System.out.format("La moyenne des factures enregistrées = %.2f euros \n", moyenneFactures);
+			System.out.format("La moyenne des factures enregistrÃ©es = %.2f euros \n", moyenneFactures);
 		}
 		
 		System.out.print("FIN DU PROGRAMME");

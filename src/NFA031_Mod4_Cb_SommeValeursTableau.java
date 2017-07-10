@@ -1,9 +1,9 @@
-/*
-Rentrer dans un tableau à 2 dimensions les données suivantes:
+ï»¿/*
+Rentrer dans un tableau Ã  2 dimensions les donnÃ©es suivantes:
 {7,  3,  4}
 {2,  8,  9}
-Demander à l’utilisateur de rentrer d’abord tous les éléments de la ligne 1 
-et ensuite de rentrer tous les éléments de la ligne 2.
+Demander Ã  lâ€™utilisateur de rentrer dâ€™abord tous les Ã©lÃ©ments de la ligne 1 
+et ensuite de rentrer tous les Ã©lÃ©ments de la ligne 2.
 Faire la somme des entiers du tableau
  */
 public class NFA031_Mod4_Cb_SommeValeursTableau {

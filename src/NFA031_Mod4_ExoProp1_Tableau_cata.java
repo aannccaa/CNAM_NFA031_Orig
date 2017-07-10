@@ -1,13 +1,13 @@
-/*
-a) Ecrire un algorithme qui demande en entrée un tableau trié dont on gardera une place libre
-à la fin du tableau. L’algorithme demandera ensuite une valeur et le rangera dans le tableau en
-respectant l’ordre croissant des éléments.
+ï»¿/*
+a) Ecrire un algorithme qui demande en entrÃ©e un tableau triÃ© dont on gardera une place libre
+Ã  la fin du tableau. Lâ€™algorithme demandera ensuite une valeur et le rangera dans le tableau en
+respectant lâ€™ordre croissant des Ã©lÃ©ments.
 Exemple :
 {12 15 16 18 20}
-Valeur à insérer : 17
+Valeur Ã  insÃ©rer : 17
 {12 15 16 17 18 20}
 
-b) Vérifiez votre solution à l’aide d’un tableau d’évolution des variables .
+b) VÃ©rifiez votre solution Ã  lâ€™aide dâ€™un tableau dâ€™Ã©volution des variables .
  */
 
 public class NFA031_Mod4_ExoProp1_Tableau_cata {
@@ -19,10 +19,10 @@ public class NFA031_Mod4_ExoProp1_Tableau_cata {
 
 		int tab[] = {1, 3, 5, 1000};//new int[nbElemTableau];
 		
-		// introduire les valeurs triés en ordre croissante:
+		// introduire les valeurs triÃ©s en ordre croissante:
 		System.out.println("Introduire " + nbElemTries + " entiers en ordre croissante: ");
 		for (int i = 0; i < nbElemTries; i++) {
-			System.out.print("Introduire le numéro " + i + " : ");
+			System.out.print("Introduire le numÃ©ro " + i + " : ");
 			tab[i] = Lire.i();
 		}
 		// introduire un entier au hazard :

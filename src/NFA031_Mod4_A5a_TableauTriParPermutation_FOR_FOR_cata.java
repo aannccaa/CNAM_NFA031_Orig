@@ -1,4 +1,4 @@
-
+﻿
 public class NFA031_Mod4_A5a_TableauTriParPermutation_FOR_FOR_cata {
 
 	public static void main(String[] args) {

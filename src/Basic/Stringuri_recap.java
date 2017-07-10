@@ -1,4 +1,4 @@
-package Basic;
+﻿package Basic;
 
 import java.util.stream.Collector.Characteristics;
 

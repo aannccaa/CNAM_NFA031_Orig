@@ -1,8 +1,8 @@
-/*
+ï»¿/*
 Exercice 1 a)
-Ecrire un algorithme qui simule une opération de retrait d’argent. L’algorithme demandera
-la saisie d’un solde et d’un montant de retrait et affichera un message et le nouveau solde
-selon l’opération réalisée.
+Ecrire un algorithme qui simule une opÃ©ration de retrait dâ€™argent. Lâ€™algorithme demandera
+la saisie dâ€™un solde et dâ€™un montant de retrait et affichera un message et le nouveau solde
+selon lâ€™opÃ©ration rÃ©alisÃ©e.
  */
 public class NFA031_Mod2_ExoProp1a_RetraitArgent {
 
@@ -12,7 +12,7 @@ public class NFA031_Mod2_ExoProp1a_RetraitArgent {
 		soldeCompte = Lire.d();
 		
 		if (soldeCompte == 0) {
-			System.out.print("Opération non authorisée. Solde en banque insufisant !");
+			System.out.print("OpÃ©ration non authorisÃ©e. Solde en banque insufisant !");
 		} else {
 
 			System.out.print("Quel est le montant que vous voulez retirer? :");
@@ -20,9 +20,9 @@ public class NFA031_Mod2_ExoProp1a_RetraitArgent {
 
 			if (soldeCompte >= mntRetrait) {
 				soldeCompte = soldeCompte - mntRetrait;
-				System.out.format("Opération authorisée. Le nouveau solde en banque est de : %.2f euros.", soldeCompte);
+				System.out.format("OpÃ©ration authorisÃ©e. Le nouveau solde en banque est de : %.2f euros.", soldeCompte);
 			} else {
-				System.out.print("Opération non authorisée. Solde en banque insufisant !");
+				System.out.print("OpÃ©ration non authorisÃ©e. Solde en banque insufisant !");
 			}
 		}
 	}

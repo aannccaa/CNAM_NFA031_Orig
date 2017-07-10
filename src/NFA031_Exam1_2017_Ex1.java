@@ -1,6 +1,6 @@
-/*
-Expliquez , à l'aide d'un tableau d'évolution des variables , ce que fait le
-programme suivant et indiquez les résultats qu'il fournit :
+ï»¿/*
+Expliquez , Ã  l'aide d'un tableau d'Ã©volution des variables , ce que fait le
+programme suivant et indiquez les rÃ©sultats qu'il fournit :
  */
 public class NFA031_Exam1_2017_Ex1 {
 

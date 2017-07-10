@@ -1,6 +1,6 @@
-/*
-Ecrire un programme qui lit en donnée l’infinitif d’un verbe du premier groupe ,
-par exemple : chanter , et qui en affiche la conjugaison au présent de l’indicatif sous la forme :
+ï»¿/*
+Ecrire un programme qui lit en donnÃ©e lâ€™infinitif dâ€™un verbe du premier groupe ,
+par exemple : chanter , et qui en affiche la conjugaison au prÃ©sent de lâ€™indicatif sous la forme :
 je chante
 tu chantes
 il chante
@@ -26,7 +26,7 @@ public class NFA031_Mod6_Chaines_ExoProp1 {
 		String conj_pers3_pl= "ils/elles  " + racineVerbe + "ent";
 		
 		String[] tab = {conj_pers1_sg, conj_pers2_sg, conj_pers3_sg, conj_pers1_pl, conj_pers2_pl, conj_pers3_pl};
-		System.out.println("La conjugaison du verbe '" + infinitifVerbe + "' au présent indicatif est:");
+		System.out.println("La conjugaison du verbe '" + infinitifVerbe + "' au prÃ©sent indicatif est:");
 		for (int i=0; i<tab.length; i++) {
 			System.out.println(tab[i]);
 		}

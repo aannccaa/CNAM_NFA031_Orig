@@ -1,12 +1,12 @@
-/*
-Ecrire une procédure pour la résolution de l’équation du premier degré:
-a*x+b=0, puis un algorithme qui l’appelle.
+ï»¿/*
+Ecrire une procÃ©dure pour la rÃ©solution de lâ€™Ã©quation du premier degrÃ©:
+a*x+b=0, puis un algorithme qui lâ€™appelle.
  */
 public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 
 	public static void main(String[] args) {
 		double a, b;
-		System.out.println("Solution de l'équation du premier degré: a*x + b = 0 .");
+		System.out.println("Solution de l'Ã©quation du premier degrÃ©: a*x + b = 0 .");
 		System.out.print("Donner a: ");
 		a = Lire.d();
 		System.out.print("Donner b: ");
@@ -31,7 +31,7 @@ public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 		}
 
 		if ((a == 0) && (b != 0)) {
-			System.out.println("Pas de solution, division par zéro impossible.");
+			System.out.println("Pas de solution, division par zÃ©ro impossible.");
 		}
 	}
 
@@ -45,7 +45,7 @@ public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 			message = "Tout nombre est une solution";
 		} else {// (a == 0) && (b != 0)
 
-			message = "Pas de solution, division par zéro impossible.";
+			message = "Pas de solution, division par zÃ©ro impossible.";
 		}
 		return message;
 	}
@@ -63,7 +63,7 @@ public class NFA031_Mod5_ExempleExo2_Fonction_EcuationPremierDegre {
 			return "Tout nombre est une solution";
 			// (a == 0) && (b != 0)
 		}
-		return "Pas de solution, division par zéro impossible.";
+		return "Pas de solution, division par zÃ©ro impossible.";
 
 	}
 }

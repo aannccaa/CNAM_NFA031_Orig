@@ -1,7 +1,7 @@
-/*
-Un élève passe un examen de trois matières avec les coefficients correspondants :
-Mathématiques (3), Informatique (5) et Français (2). 
-Ecrire un algorithme qui demande la saisie des notes de l’élève, 
+ï»¿/*
+Un Ã©lÃ¨ve passe un examen de trois matiÃ¨res avec les coefficients correspondants :
+MathÃ©matiques (3), Informatique (5) et FranÃ§ais (2). 
+Ecrire un algorithme qui demande la saisie des notes de lâ€™Ã©lÃ¨ve, 
 calcule et affiche sa moyenne.
 */
 
@@ -9,15 +9,15 @@ calcule et affiche sa moyenne.
 
 Algo: Moyenne_3_Notes
 
-Déclarations
-NoteMath, NoteInfo, NoteFra, Moyenne : réels;
+DÃ©clarations
+NoteMath, NoteInfo, NoteFra, Moyenne : rÃ©els;
 
-Début
-Ecrire ("Donner la note en Mathématiques :")
+DÃ©but
+Ecrire ("Donner la note en MathÃ©matiques :")
 Lire (NoteMath)
 Ecrire ("Donner la note en Informatique :")
 Lire (NoteInfo)
-Ecrire ("Donner la note en Français :")
+Ecrire ("Donner la note en FranÃ§ais :")
 Lire (NoteFra)
 Moyenne = (3 * NoteMath + 5 * NoteInfo + 2 * NoteFra) / (3 + 5 + 2);
 Ecrire ("La moyenne est :", Moyenne)
@@ -29,11 +29,11 @@ Fin Moyenne_3_Notes
 public class NFA031_Mod1_ExoProp1_Moyenne3Notes {
 	public static void main(String[] arg) {
 		double NoteMath, NoteInfo, NoteFra, Moyenne;
-		System.out.print("Donner la note en Mathématiques :");
+		System.out.print("Donner la note en MathÃ©matiques :");
 		NoteMath = Lire.d();
 		System.out.print("Donner la note en Informatique :");
 		NoteInfo = Lire.d();
-		System.out.print("Donner la note en Français :");
+		System.out.print("Donner la note en FranÃ§ais :");
 		NoteFra = Lire.d();
 		Moyenne = (3 * NoteMath + 5 * NoteInfo + 2 * NoteFra) / (3 + 5 + 2);
 		System.out.print("La moyenne est :" + Moyenne);

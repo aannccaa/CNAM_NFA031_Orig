@@ -1,10 +1,10 @@
-/*
-a) Ecrire un code pour remplir un tableau d’entiers de 3 lignes et 4 colonnes.
-On convient de démarrer l’indexation des lignes et des colonnes à l’indice 0.
+ï»¿/*
+a) Ecrire un code pour remplir un tableau dâ€™entiers de 3 lignes et 4 colonnes.
+On convient de dÃ©marrer lâ€™indexation des lignes et des colonnes Ã  lâ€™indice 0.
 b) Ecrire un code pour calculer la valeur minimale des entiers contenus 
-dans une ligne dont l’indice est fourni par l’utilisateur.
+dans une ligne dont lâ€™indice est fourni par lâ€™utilisateur.
 c) Ecrire un code pour calculer la valeur maximale des entiers contenus 
-dans une colonne dont l’indice est fourni par l’utilisateur.
+dans une colonne dont lâ€™indice est fourni par lâ€™utilisateur.
  */
 public class NFA031_Mod4_ExoCor3_Tableau {
 

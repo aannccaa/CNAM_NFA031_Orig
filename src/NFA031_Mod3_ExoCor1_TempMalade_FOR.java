@@ -1,9 +1,9 @@
-/*
+ï»¿/*
 Exercice 1
-On surveille la température d’un malade pendant 24 heures toutes les deux heures. 
-Ecrire un algorithme qui demande la saisie des relevés de température 
-et calcule la température moyenne. 
-Il affichera son écart par rapport à la température normale.
+On surveille la tempÃ©rature dâ€™un malade pendant 24 heures toutes les deux heures. 
+Ecrire un algorithme qui demande la saisie des relevÃ©s de tempÃ©rature 
+et calcule la tempÃ©rature moyenne. 
+Il affichera son Ã©cart par rapport Ã  la tempÃ©rature normale.
  */
 
 public class NFA031_Mod3_ExoCor1_TempMalade_FOR {
@@ -13,15 +13,15 @@ public class NFA031_Mod3_ExoCor1_TempMalade_FOR {
 		double tempReleve, sommeTemp = 0, tempMoyenne, tempNormalle = 37, ecartTemp;
 		int nombreTempReleve = 24 / 2;
 		for (int i = 1; i <= nombreTempReleve; i = i + 1) {
-			System.out.print("Rentrez la temperature pour le relevé n° " + i + ": ");
+			System.out.print("Rentrez la temperature pour le relevÃ© nÂ° " + i + ": ");
 			tempReleve = Lire.d();
 			sommeTemp = sommeTemp + tempReleve;
 
 		}
 		tempMoyenne = sommeTemp / nombreTempReleve;
 		ecartTemp = tempMoyenne - tempNormalle;
-		System.out.format("Temp moyenne = %.2f °C \n", tempMoyenne);
-		System.out.format("L'écart de temp moyenne par rapport à la temperature normale est de %.2f °C \n", ecartTemp);
+		System.out.format("Temp moyenne = %.2f Â°C \n", tempMoyenne);
+		System.out.format("L'Ã©cart de temp moyenne par rapport Ã  la temperature normale est de %.2f Â°C \n", ecartTemp);
 
 	}
 

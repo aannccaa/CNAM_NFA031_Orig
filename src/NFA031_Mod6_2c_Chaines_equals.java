@@ -1,6 +1,6 @@
-/*
-demander 5 noms à l’utilisateur, les place dans un tableau. 
-Le code demande ensuite à l’utilisateur de taper un nom et indique
+ï»¿/*
+demander 5 noms Ã  lâ€™utilisateur, les place dans un tableau. 
+Le code demande ensuite Ã  lâ€™utilisateur de taper un nom et indique
 si le nom fourni fait ou non partie du tableau
  */
 public class NFA031_Mod6_2c_Chaines_equals {
@@ -12,7 +12,7 @@ public class NFA031_Mod6_2c_Chaines_equals {
 		boolean estTrouve;
 
 		for (int i = 0; i < nombreMots; i++) {
-			System.out.print("Donner le mot n° " + i + " : ");
+			System.out.print("Donner le mot nÂ° " + i + " : ");
 			tab[i] = Lire.S();
 		}
 		System.out.print("Donner un mot quelconque : ");

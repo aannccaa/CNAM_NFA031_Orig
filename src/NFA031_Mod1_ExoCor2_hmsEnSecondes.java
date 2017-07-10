@@ -1,7 +1,7 @@
-/*
+ï»¿/*
  Exercice 2
-Ecrire un algorithme qui demande à l’utilisateur 
-un nombre d’heures, 
+Ecrire un algorithme qui demande Ã  lâ€™utilisateur 
+un nombre dâ€™heures, 
 un nombre de minutes et un nombre de secondes, 
 convertit le tout en secondes et affiche le total.
  */

@@ -1,4 +1,4 @@
-//calcul du cube d’un nombre , réalisé à l’aide d’une fonction.
+ï»¿//calcul du cube dâ€™un nombre , rÃ©alisÃ© Ã  lâ€™aide dâ€™une fonction.
 public class NFA031_Mod5_Ba_Fonction_passerValeurEnParam_Cube {
 
 	public static void main(String[] args) {

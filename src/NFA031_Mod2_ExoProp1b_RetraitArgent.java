@@ -1,9 +1,9 @@
-/*
+ï»¿/*
 Exercice 1 b)
-Ecrire un algorithme qui simule une opération de retrait d’argent. L’algorithme demandera
-la saisie d’un solde et d’un montant de retrait et affichera un message et le nouveau solde
-selon l’opération réalisée. 
-Il faut prendre en compte une autorisation de découvert, un montant à fixer.
+Ecrire un algorithme qui simule une opÃ©ration de retrait dâ€™argent. Lâ€™algorithme demandera
+la saisie dâ€™un solde et dâ€™un montant de retrait et affichera un message et le nouveau solde
+selon lâ€™opÃ©ration rÃ©alisÃ©e. 
+Il faut prendre en compte une autorisation de dÃ©couvert, un montant Ã  fixer.
  */
 
 public class NFA031_Mod2_ExoProp1b_RetraitArgent {
@@ -14,7 +14,7 @@ public class NFA031_Mod2_ExoProp1b_RetraitArgent {
 		soldeCompte = Lire.d();
 		
 		if (soldeCompte == 0) {
-			System.out.print("Opération non authorisée. Solde du compte insufisant !");
+			System.out.print("OpÃ©ration non authorisÃ©e. Solde du compte insufisant !");
 		} else {
 
 			System.out.print("Quel est le montant que vous voulez retirer? :");
@@ -22,12 +22,12 @@ public class NFA031_Mod2_ExoProp1b_RetraitArgent {
 
 			if (soldeCompte >= mntRetrait) {
 				soldeCompte = soldeCompte - mntRetrait;
-				System.out.format("Opération authorisée. Le nouveau solde du compte est de : %.2f euros.", soldeCompte);
+				System.out.format("OpÃ©ration authorisÃ©e. Le nouveau solde du compte est de : %.2f euros.", soldeCompte);
 			} else {
 				mntDecouvert = mntRetrait - soldeCompte;
-				System.out.format("Solde en banque insufisant ! Le découvert du compte après opération serait de - %.2f euros \n", mntDecouvert);
+				System.out.format("Solde en banque insufisant ! Le dÃ©couvert du compte aprÃ¨s opÃ©ration serait de - %.2f euros \n", mntDecouvert);
 				mntRetrait = mntRetrait - mntDecouvert;
-				System.out.format("Le solde doit être positif. Vous ne pouvez retirer que maximum %.2f euros \n", mntRetrait);
+				System.out.format("Le solde doit Ãªtre positif. Vous ne pouvez retirer que maximum %.2f euros \n", mntRetrait);
 			}
 		}
 	}

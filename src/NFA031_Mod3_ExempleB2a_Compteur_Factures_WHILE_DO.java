@@ -1,6 +1,6 @@
-/*
-écrivons un programme pour enregistrer des montants de factures. 
-Ce programme devra à la fin indiquer le nombre de factures enregistrées.
+ï»¿/*
+Ã©crivons un programme pour enregistrer des montants de factures. 
+Ce programme devra Ã  la fin indiquer le nombre de factures enregistrÃ©es.
  */
 
 public class NFA031_Mod3_ExempleB2a_Compteur_Factures_WHILE_DO {
@@ -18,12 +18,12 @@ public class NFA031_Mod3_ExempleB2a_Compteur_Factures_WHILE_DO {
 			choix = Character.toUpperCase(Lire.c());
 		}
 		if (compteur == 0) {
-			System.out.println("Vous n'avez pas enregistré de facture. ");
+			System.out.println("Vous n'avez pas enregistrÃ© de facture. ");
 		} else {
 			if (compteur == 1) {
-				System.out.println("Vous avez enregistré une facture. ");
+				System.out.println("Vous avez enregistrÃ© une facture. ");
 			} else {
-				System.out.println("Vous avez enregistré " + compteur + " factures. ");
+				System.out.println("Vous avez enregistrÃ© " + compteur + " factures. ");
 			}
 		}
 		System.out.print("FIN DU PROGRAMME");

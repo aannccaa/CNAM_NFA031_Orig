@@ -1,5 +1,5 @@
-/*
- Ecrire un code qui fournit à son exécution le résultat suivant :
+ï»¿/*
+ Ecrire un code qui fournit Ã  son exÃ©cution le rÃ©sultat suivant :
     *
    **
   ***

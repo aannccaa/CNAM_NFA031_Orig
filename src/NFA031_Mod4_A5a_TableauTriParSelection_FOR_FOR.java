@@ -1,4 +1,4 @@
-
+﻿
 public class NFA031_Mod4_A5a_TableauTriParSelection_FOR_FOR {
 
 	public static void main(String[] args) {

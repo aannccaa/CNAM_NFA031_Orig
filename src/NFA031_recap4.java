@@ -1,12 +1,12 @@
-/*
-On souhaite utiliser un programme pour enregistrer les résultats d’une élection. 
-Ces résultats donneront le nombre de voix obtenu par candidat et par bureau de vote. 
+ï»¿/*
+On souhaite utiliser un programme pour enregistrer les rÃ©sultats dâ€™une Ã©lection. 
+Ces rÃ©sultats donneront le nombre de voix obtenu par candidat et par bureau de vote. 
 Les candidats sont Riri, Fifi et Loulou. Il y a 5 bureaux de vote.
-a) Définissez la ou les variables nécessaires pour contenir ces données ainsi que le code
-nécessaire pour enregistrer au clavier les données sur le vote.
-b) Ecrivez une méthode qui calcule le pourcentage d’un candidat donné. Cette méthode ne
+a) DÃ©finissez la ou les variables nÃ©cessaires pour contenir ces donnÃ©es ainsi que le code
+nÃ©cessaire pour enregistrer au clavier les donnÃ©es sur le vote.
+b) Ecrivez une mÃ©thode qui calcule le pourcentage dâ€™un candidat donnÃ©. Cette mÃ©thode ne
 doit rien afficher.
-c) Utilisez cette méthode pour faire afficher le pourcentage des votes obtenus par chacun des
+c) Utilisez cette mÃ©thode pour faire afficher le pourcentage des votes obtenus par chacun des
 candidats.
 d) Affichez le nom du vainqueur.
  */
@@ -33,16 +33,16 @@ public class NFA031_recap4 {
 		// afficher les resultats en % par candidat et bureau
 	}
 
-	// introduire les votes dans un tableau à 2 dimensions
+	// introduire les votes dans un tableau Ã  2 dimensions
 	public static int[][] rentrerResultats(int nbBureaux, int nbCandidats) {
-		// première dimension les bureaux de vote
+		// premiÃ¨re dimension les bureaux de vote
 		int[][] tab = new int[nbBureaux][nbCandidats];
 
 		// sur chaque ligne representant un bureau de vote, enregistrer le votes
 		// de chaque candidat
 		for (int bureau = 0; bureau < nbBureaux; bureau++) {
 			for (int candidat = 0; candidat < nbCandidats; candidat++) {
-				System.out.format("Pour le bureau n° %d, donner le nombre de votes pour le candidat n° %d:",
+				System.out.format("Pour le bureau nÂ° %d, donner le nombre de votes pour le candidat nÂ° %d:",
 						(bureau + 1), (candidat + 1));
 				tab[bureau][candidat] = Lire.i();
 			}
@@ -144,30 +144,30 @@ public class NFA031_recap4 {
 		
 		switch (choixGagnant) {
 		case ("Riri"): {
-			System.out.println("Riri a gagné");
+			System.out.println("Riri a gagnÃ©");
 
 		}
 			break;
 		case ("Fifi"): {
-			System.out.println("Fifi a gagné");
+			System.out.println("Fifi a gagnÃ©");
 
 		}
 			break;
 		case ("Loulou"): {
-			System.out.println("Loulou a gagné");
+			System.out.println("Loulou a gagnÃ©");
 
 		}
 			break;
 		}
 
 		// variante2, avec if than else
-		System.out.format("Le candidat %d a gagné\n", (indexVainqueur + 1));
+		System.out.format("Le candidat %d a gagnÃ©\n", (indexVainqueur + 1));
 		if (indexVainqueur == 0) {
-			System.out.println("Riri a gagné");
+			System.out.println("Riri a gagnÃ©");
 		} else if (indexVainqueur == 1) {
-			System.out.println("Fifi a gagné");
+			System.out.println("Fifi a gagnÃ©");
 		} else {
-			System.out.println("Loulou a gagné");
+			System.out.println("Loulou a gagnÃ©");
 		}
 	}
 }

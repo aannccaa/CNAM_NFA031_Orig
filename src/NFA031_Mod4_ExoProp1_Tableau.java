@@ -1,13 +1,13 @@
-/*
-a) Ecrire un algorithme qui demande en entrée un tableau trié dont on gardera une place libre
-à la fin du tableau. L’algorithme demandera ensuite une valeur et le rangera dans le tableau en
-respectant l’ordre croissant des éléments.
+ï»¿/*
+a) Ecrire un algorithme qui demande en entrÃ©e un tableau triÃ© dont on gardera une place libre
+Ã  la fin du tableau. Lâ€™algorithme demandera ensuite une valeur et le rangera dans le tableau en
+respectant lâ€™ordre croissant des Ã©lÃ©ments.
 Exemple :
 {12 15 16 18 20}
-Valeur à insérer : 17
+Valeur Ã  insÃ©rer : 17
 {12 15 16 17 18 20}
 
-b) Vérifiez votre solution à l’aide d’un tableau d’évolution des variables .
+b) VÃ©rifiez votre solution Ã  lâ€™aide dâ€™un tableau dâ€™Ã©volution des variables .
  */
 
 public class NFA031_Mod4_ExoProp1_Tableau {
@@ -20,22 +20,22 @@ public class NFA031_Mod4_ExoProp1_Tableau {
 		int temp = -1;
 		int dernierNb;
 
-		// introduire un nombre des entiers croissants donnés par l'utilsateur
+		// introduire un nombre des entiers croissants donnÃ©s par l'utilsateur
 		// dans un tableau:
-		System.out.println("Donner " + nbValCroissantes + " numéros entiers en ordre croissante. ");
+		System.out.println("Donner " + nbValCroissantes + " numÃ©ros entiers en ordre croissante. ");
 
 		for (int i = 0; i < nbValCroissantes; i++) {
-			System.out.print("Donner le numéro " + i + " : ");
+			System.out.print("Donner le numÃ©ro " + i + " : ");
 			tab[i] = Lire.i();
 		}
 
 		//
-		System.out.print("Donner un autre numéro entier au hazard : ");
+		System.out.print("Donner un autre numÃ©ro entier au hazard : ");
 		dernierNb = Lire.i();
 		tab[nbElemTableau - 1] = dernierNb;
 
 		// tri croissant valeurs du tableau, tenant compte que les premiers
-		// valeurs "nbValCroissantes" sont déjà ordonnées:
+		// valeurs "nbValCroissantes" sont dÃ©jÃ  ordonnÃ©es:
 		int n = nbElemTableau;
 		for (int i=n-1; i>0; i--) {
 			if (tab[i] < tab[i-1]) {
@@ -48,7 +48,7 @@ public class NFA031_Mod4_ExoProp1_Tableau {
 		
 		// print tableau:
 		separateur = "";
-		System.out.print("Le tableau ordonné en ordre croissante: { ");
+		System.out.print("Le tableau ordonnÃ© en ordre croissante: { ");
 		for (int i = 0; i < nbElemTableau; i++) {
 			System.out.print(separateur + tab[i]);
 			separateur = ", ";
@@ -56,8 +56,8 @@ public class NFA031_Mod4_ExoProp1_Tableau {
 		System.out.print(" }");
 
 		/*
-		// tri croissant valeurs du tableau méthode par bulle, marche aussi
-		// quand le tableau en entrée n'est pas ordonné :
+		// tri croissant valeurs du tableau mÃ©thode par bulle, marche aussi
+		// quand le tableau en entrÃ©e n'est pas ordonnÃ© :
 		for (int i = 0; i < nbElemTableau - 1; i++) {
 			for (int j = 0; j < nbElemTableau - 1; j++) {
 				if (tab[j] > tab[j + 1]) {
@@ -70,9 +70,9 @@ public class NFA031_Mod4_ExoProp1_Tableau {
 
 		}
 
-		// afficher le tableau ordonné ordre croissante:
+		// afficher le tableau ordonnÃ© ordre croissante:
 		separateur = "";
-		System.out.print("Le tableau ordonné en ordre croissante méthode bulle: { ");
+		System.out.print("Le tableau ordonnÃ© en ordre croissante mÃ©thode bulle: { ");
 		for (int i = 0; i < nbElemTableau; i++) {
 			System.out.print(separateur + tab[i]);
 			separateur = ", ";

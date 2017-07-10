@@ -1,6 +1,6 @@
-/*
-écrivons un programme pour enregistrer des montants de factures. 
-Ce programme devra à la fin indiquer la somme de factures enregistrées.
+ï»¿/*
+Ã©crivons un programme pour enregistrer des montants de factures. 
+Ce programme devra Ã  la fin indiquer la somme de factures enregistrÃ©es.
  */
 
 public class NFA031_Mod3_ExempleB2b_Acumulateur_SommeFactures_WHILE_DO {
@@ -20,9 +20,9 @@ public class NFA031_Mod3_ExempleB2b_Acumulateur_SommeFactures_WHILE_DO {
 		}
 		
 		if (sommeFactures == 0) {
-			System.out.println("La somme des factures enregistrées =  " + sommeFactures + " euro. Vous n'avez enregistré aucune facture");
+			System.out.println("La somme des factures enregistrÃ©es =  " + sommeFactures + " euro. Vous n'avez enregistrÃ© aucune facture");
 		} else {
-		System.out.format("La somme des factures enregistrées = %.2f euros \n", sommeFactures);
+		System.out.format("La somme des factures enregistrÃ©es = %.2f euros \n", sommeFactures);
 	}
 		System.out.print("FIN DU PROGRAMME");
 }

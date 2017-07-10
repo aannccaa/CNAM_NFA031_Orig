@@ -1,23 +1,23 @@
-/*
+ï»¿/*
 Exercice 1 .
 
-Un utilisateur souhaite saisir au clavier les lettres qui composent un mot . Pour cela , il décide
-de les rentrer un à un les lettres et d’appuyer sur la touche ‘Entrée’ à chaque saisie . De plus ,
-il indique la fin de la saisie par le caractère * .
-Ainsi , s’il veut rentrer le mot ‘car’ , les données apparaitront à l’écran avec la disposition
+Un utilisateur souhaite saisir au clavier les lettres qui composent un mot . Pour cela , il dÃ©cide
+de les rentrer un Ã  un les lettres et dâ€™appuyer sur la touche â€˜EntrÃ©eâ€™ Ã  chaque saisie . De plus ,
+il indique la fin de la saisie par le caractÃ¨re * .
+Ainsi , sâ€™il veut rentrer le mot â€˜carâ€™ , les donnÃ©es apparaitront Ã  lâ€™Ã©cran avec la disposition
 suivante : 
 c
 a
 r
 *
 
-a) Ecrire un code pour fabriquer une variable Mot de type ‘String’ qui devra contenir les
-lettres du mot fourni . Pour cela , vous pouvez saisir les lettres en tant que caractères ,
-initialiser Mot avec l’affectation : Mot= "" et fabriquer Mot en utilisant la concaténation des
-chaines . La concaténation s’opère entre deux chaines , mais peut aussi s’effectuer entre une
-chaine et un caractère ; dans ce cas , le caractère est ajouté à la chaine de caractères .
-b) L’utilisateur est parfois distrait et il lui arrive d’appuyer sur ‘Entrée’ sans fournir de
-caractère . Modifier le programme du a) afin qu’il ne saisisse que les caractères formant le
+a) Ecrire un code pour fabriquer une variable Mot de type â€˜Stringâ€™ qui devra contenir les
+lettres du mot fourni . Pour cela , vous pouvez saisir les lettres en tant que caractÃ¨res ,
+initialiser Mot avec lâ€™affectation : Mot= "" et fabriquer Mot en utilisant la concatÃ©nation des
+chaines . La concatÃ©nation sâ€™opÃ¨re entre deux chaines , mais peut aussi sâ€™effectuer entre une
+chaine et un caractÃ¨re ; dans ce cas , le caractÃ¨re est ajoutÃ© Ã  la chaine de caractÃ¨res .
+b) Lâ€™utilisateur est parfois distrait et il lui arrive dâ€™appuyer sur â€˜EntrÃ©eâ€™ sans fournir de
+caractÃ¨re . Modifier le programme du a) afin quâ€™il ne saisisse que les caractÃ¨res formant le
 mot .
  */
 public class NFA031_Mod6_Chaines_ExoCor1 {

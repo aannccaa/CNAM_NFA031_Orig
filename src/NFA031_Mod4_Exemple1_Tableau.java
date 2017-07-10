@@ -1,10 +1,10 @@
-/*
-a) Ecrire un code pour déclarer un tableau de réels de taille N, 
-	N étant à définir par l'utilisateur.
+ï»¿/*
+a) Ecrire un code pour dÃ©clarer un tableau de rÃ©els de taille N, 
+	N Ã©tant Ã  dÃ©finir par l'utilisateur.
 b) Ecrire un code pour remplir ce tableau.
-c) Compléter le code pour qu'il demande à l'utilisateur un nombre x de son choix.
+c) ComplÃ©ter le code pour qu'il demande Ã  l'utilisateur un nombre x de son choix.
 
-Le programme devra indiquer le nombre de réels qui sont supérieurs ou égaux à
+Le programme devra indiquer le nombre de rÃ©els qui sont supÃ©rieurs ou Ã©gaux Ã 
 ce nombre x fourni par l'utilisateur .
 */
 
@@ -12,16 +12,16 @@ public class NFA031_Mod4_Exemple1_Tableau {
 	public static void main(String[] args) {
 
 		int N, i, compteur = 0;
-		System.out.print("Donner la taille du tableau de réels: ");
+		System.out.print("Donner la taille du tableau de rÃ©els: ");
 		N = Lire.i();
 		double tab[] = new double[N];
 
 		for (i = 0; i < N; i++) {
-			System.out.print("Donner le nombre réel numéro " + (i + 1) + " : ");
+			System.out.print("Donner le nombre rÃ©el numÃ©ro " + (i + 1) + " : ");
 			tab[i] = Lire.d();
 		}
 
-		System.out.print("Donner un nombre réel x: ");
+		System.out.print("Donner un nombre rÃ©el x: ");
 		double x = Lire.d();
 
 		for (i = 0; i < N; i++) {
@@ -29,6 +29,6 @@ public class NFA031_Mod4_Exemple1_Tableau {
 				compteur = compteur + 1;
 			}
 		}
-		System.out.println("Le nombre des réels du tableau qui sont >= " + x + " est de " + compteur);
+		System.out.println("Le nombre des rÃ©els du tableau qui sont >= " + x + " est de " + compteur);
 	}
 }

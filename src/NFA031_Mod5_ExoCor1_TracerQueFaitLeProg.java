@@ -1,6 +1,6 @@
-/*
-Donner et expliquer , à l’aide d’un tableau 
-retraçant l’évolution des variables, les résultats
+ï»¿/*
+Donner et expliquer , Ã  lâ€™aide dâ€™un tableau 
+retraÃ§ant lâ€™Ã©volution des variables, les rÃ©sultats
 fournis par le programme suivant :
 */
 

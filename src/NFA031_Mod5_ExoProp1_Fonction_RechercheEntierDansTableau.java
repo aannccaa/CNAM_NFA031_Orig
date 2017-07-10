@@ -1,7 +1,7 @@
-/*
-Ecrire une procédure qui reçoit en entrée un tableau de 20 entiers, et une valeur entière à
-rechercher dans le tableau. La procédure devra indiquer si la valeur à rechercher existe ou
-non dans le tableau ainsi que l’indice de cette valeur dans le tableau (si la valeur y figure).
+ï»¿/*
+Ecrire une procÃ©dure qui reÃ§oit en entrÃ©e un tableau de 20 entiers, et une valeur entiÃ¨re Ã 
+rechercher dans le tableau. La procÃ©dure devra indiquer si la valeur Ã  rechercher existe ou
+non dans le tableau ainsi que lâ€™indice de cette valeur dans le tableau (si la valeur y figure).
  */
 public class NFA031_Mod5_ExoProp1_Fonction_RechercheEntierDansTableau {
 
@@ -11,9 +11,9 @@ public class NFA031_Mod5_ExoProp1_Fonction_RechercheEntierDansTableau {
 		int indexValeurARechercher = rechercherValeur(valeurARechercher, tab);
 
 		if (indexValeurARechercher == -1) {
-			System.out.println("La valeur " + valeurARechercher + " n'a pas été trouvée dans le tableau. ");
+			System.out.println("La valeur " + valeurARechercher + " n'a pas Ã©tÃ© trouvÃ©e dans le tableau. ");
 		} else {
-			System.out.println("Le premier index de la valeur recherchée " + valeurARechercher + " est : "
+			System.out.println("Le premier index de la valeur recherchÃ©e " + valeurARechercher + " est : "
 					+ indexValeurARechercher);
 		}
 

@@ -1,5 +1,5 @@
-/*
-  Ecrire un programme qui calcule et affiche le prix après ristourne , lorsqu’on lui  
+ï»¿/*
+  Ecrire un programme qui calcule et affiche le prix aprÃ¨s ristourne , lorsquâ€™on lui  
  fourni le prix avant la ristourne et le pourcentage de la ristourne .
  */
 public class NFA031_Mod1_Exo2_PrixRistourne {
@@ -10,8 +10,8 @@ public class NFA031_Mod1_Exo2_PrixRistourne {
 		System.out.print("Donner le pourcentage de la ristourne: ");
 		pourcentageRisourne = Lire.d();
 		prixApresRistourne = prixAvantRistourne - prixAvantRistourne * pourcentageRisourne / 100;
-		System.out.println("Le prix non formaté après ristourne est : " + prixApresRistourne + " euros.");
-		System.out.format("Le prix formaté après ristourne est : %.2f euros \n", prixApresRistourne);
+		System.out.println("Le prix non formatÃ© aprÃ¨s ristourne est : " + prixApresRistourne + " euros.");
+		System.out.format("Le prix formatÃ© aprÃ¨s ristourne est : %.2f euros \n", prixApresRistourne);
 
 	}
 }F

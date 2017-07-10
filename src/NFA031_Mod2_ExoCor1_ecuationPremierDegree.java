@@ -1,27 +1,27 @@
-/*
-Ecrire un algorithme qui réalise la résolution d’une équation du premier degré : a*x+b=0.
-Remarque : la discussion à programmer est la suivante : 
-si a est différent de 0 , alors l’équation admet une solution unique : x = -b/a ; 
-si a = 0 , avec b non nul , alors l’équation n’admet pas de solution ; 
-si a et b sont nuls , alors l’équation admet tout nombre réel comme solution .
+ï»¿/*
+Ecrire un algorithme qui rÃ©alise la rÃ©solution dâ€™une Ã©quation du premier degrÃ© : a*x+b=0.
+Remarque : la discussion Ã  programmer est la suivante : 
+si a est diffÃ©rent de 0 , alors lâ€™Ã©quation admet une solution unique : x = -b/a ; 
+si a = 0 , avec b non nul , alors lâ€™Ã©quation nâ€™admet pas de solution ; 
+si a et b sont nuls , alors lâ€™Ã©quation admet tout nombre rÃ©el comme solution .
 */
 
 public class NFA031_Mod2_ExoCor1_ecuationPremierDegree {
 	public static void main(String[] arg) {
 		double a, b, x;
-		System.out.print("Donner un nombre réel a= ");
+		System.out.print("Donner un nombre rÃ©el a= ");
 		a = Lire.d();
-		System.out.print("Donner un nombre réel b= ");
+		System.out.print("Donner un nombre rÃ©el b= ");
 		b = Lire.d();
 		if (a != 0) {
 			x = -b / a;
 			System.out.print("x = " + x);
 		}
 		if ((a == 0) && (b != 0)) {
-			System.out.print("L’équation n’admet pas de solution. Division par zéro impossible.");
+			System.out.print("Lâ€™Ã©quation nâ€™admet pas de solution. Division par zÃ©ro impossible.");
 		}
 		if ((a == 0) && (b == 0)) {
-			System.out.print("L’équation admet tout nombre réel comme solution. Division 0/0");
+			System.out.print("Lâ€™Ã©quation admet tout nombre rÃ©el comme solution. Division 0/0");
 		}
 		System.out.println("FIN DE PROGRAMME");
 	}

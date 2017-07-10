@@ -1,13 +1,13 @@
-/*
-a) Ecrire un code pour remplir un tableau d’entiers de 4 lignes et 5 colonnes. 
-On convient de démarrer l’indexation des lignes et des colonnes à l’indice 0.
+ï»¿/*
+a) Ecrire un code pour remplir un tableau dâ€™entiers de 4 lignes et 5 colonnes. 
+On convient de dÃ©marrer lâ€™indexation des lignes et des colonnes Ã  lâ€™indice 0.
 b) Ecrire un code pour trier par ordre croissant les entiers contenus dans une ligne dont
-l’indice est fourni par l’utilisateur.
-c) Ecrire un code pour trier par ordre décroissant les entiers contenus dans une colonne dont
-l’indice est fourni par l’utilisateur .
+lâ€™indice est fourni par lâ€™utilisateur.
+c) Ecrire un code pour trier par ordre dÃ©croissant les entiers contenus dans une colonne dont
+lâ€™indice est fourni par lâ€™utilisateur .
 
-Indication : afin de ne pas modifier les données du tableau initial, 
-il faut effectuer les tris sur des copies des données.
+Indication : afin de ne pas modifier les donnÃ©es du tableau initial, 
+il faut effectuer les tris sur des copies des donnÃ©es.
  */
 
 public class NFA031_Mod4_ExoProp3_Tableau {
@@ -16,9 +16,9 @@ public class NFA031_Mod4_ExoProp3_Tableau {
 		int nbLignes = 4;
 		int nbCol = 5;
 		int tab[][] = new int[nbLignes][nbCol];
-		// creer un vecteur pour la ligne à trier:
+		// creer un vecteur pour la ligne Ã  trier:
 		int tabLigne[] = new int[nbCol];
-		// creer un vecteur pour la col à trier:
+		// creer un vecteur pour la col Ã  trier:
 		int tabCol[] = new int[nbLignes];
 
 		int indiceLigne = 2;
@@ -65,21 +65,21 @@ public class NFA031_Mod4_ExoProp3_Tableau {
 
 		}
 
-		// afficher le vecteur trié pour indiceLigne
-		System.out.println("Voici la ligne d'indice " + indiceLigne + " triée en ordre croissante:");
+		// afficher le vecteur triÃ© pour indiceLigne
+		System.out.println("Voici la ligne d'indice " + indiceLigne + " triÃ©e en ordre croissante:");
 		for (int i = 0; i <= nbCol - 1; i++) {
 			System.out.print(tabLigne[i] + " ");
 		}
 		System.out.println();
 
 		// remplir le vecteur correspondant a l'indiceCol
-		System.out.print("Donner l'indice de la col que vous voulez trier en ordre décroissante : ");
+		System.out.print("Donner l'indice de la col que vous voulez trier en ordre dÃ©croissante : ");
 		indiceCol = Lire.i();
 		for (int i = 0; i < nbLignes; i++) {
 			tabCol[i] = tab[i][indiceCol];
 		}
 
-		// ordonner décroissant le vecteur pour l'indiceCol
+		// ordonner dÃ©croissant le vecteur pour l'indiceCol
 		for (int i = 0; i < nbLignes - 1; i++) {
 			for (int j = i + 1; j < nbLignes; j++) {
 				if (tabCol[i] < tabCol[j]) {
@@ -90,8 +90,8 @@ public class NFA031_Mod4_ExoProp3_Tableau {
 			}
 		}
 
-		// afficher le vecteur trié pour indiceCol
-		System.out.println("Voici la colonne d'indice " + indiceCol + " triée en ordre decroissante:");
+		// afficher le vecteur triÃ© pour indiceCol
+		System.out.println("Voici la colonne d'indice " + indiceCol + " triÃ©e en ordre decroissante:");
 		for (int i = 0; i < nbLignes; i++) {
 			System.out.println(tabCol[i] + " ");
 		}

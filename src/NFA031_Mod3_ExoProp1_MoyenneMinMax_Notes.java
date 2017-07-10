@@ -1,9 +1,9 @@
-/*
-Une classe est composée de 25 élèves. Chaque élève passe un examen de trois matières : 
-les mathématiques avec un coefficient de 3, l’informatique avec un coefficient de 4 
-et le français avec un coefficient de 2.
-Ecrire un algorithme qui demande les notes des élèves, calcule leurs moyennes, 
-la moyenne maximale, la moyenne minimale et la moyenne générale de la classe.
+ï»¿/*
+Une classe est composÃ©e de 25 Ã©lÃ¨ves. Chaque Ã©lÃ¨ve passe un examen de trois matiÃ¨res : 
+les mathÃ©matiques avec un coefficient de 3, lâ€™informatique avec un coefficient de 4 
+et le franÃ§ais avec un coefficient de 2.
+Ecrire un algorithme qui demande les notes des Ã©lÃ¨ves, calcule leurs moyennes, 
+la moyenne maximale, la moyenne minimale et la moyenne gÃ©nÃ©rale de la classe.
 */
 
 public class NFA031_Mod3_ExoProp1_MoyenneMinMax_Notes {
@@ -13,16 +13,16 @@ public class NFA031_Mod3_ExoProp1_MoyenneMinMax_Notes {
 				moyenneMaxClasse = 0, moyenneGenClasse = 0;
 
 		for (int i = 1; i <= nbEleves; i++) {
-			System.out.print("Donner la note en Mathématique pour l'eleve n° " + i + " : ");
+			System.out.print("Donner la note en MathÃ©matique pour l'eleve nÂ° " + i + " : ");
 			noteMath = Lire.d();
-			System.out.print("Donner la note en Informatique pour l'eleve n° " + i + " : ");
+			System.out.print("Donner la note en Informatique pour l'eleve nÂ° " + i + " : ");
 			noteInfo = Lire.d();
-			System.out.print("Donner la note en Français pour l'eleve n° " + i + " : ");
+			System.out.print("Donner la note en FranÃ§ais pour l'eleve nÂ° " + i + " : ");
 			noteFra = Lire.d();
 
 			moyenneEleve = (noteMath * coefMath + noteInfo * coefInfo + noteFra * coefFra)
 					/ (coefMath + coefInfo + coefFra);
-			System.out.format("L'eleve n° %d a une moyenne = %.2f \n", i, moyenneEleve);
+			System.out.format("L'eleve nÂ° %d a une moyenne = %.2f \n", i, moyenneEleve);
 
 			sommeMoyennesEleves = sommeMoyennesEleves + moyenneEleve;
 
@@ -35,7 +35,7 @@ public class NFA031_Mod3_ExoProp1_MoyenneMinMax_Notes {
 
 		}
 		moyenneGenClasse = sommeMoyennesEleves / nbEleves;
-		System.out.format("Moyenne générale de la classe ayant %d eleves = %.2f \n", nbEleves, moyenneGenClasse);
+		System.out.format("Moyenne gÃ©nÃ©rale de la classe ayant %d eleves = %.2f \n", nbEleves, moyenneGenClasse);
 		System.out.format("Moyenne min. de la classe ayant %d eleves = %.2f \n", nbEleves, moyenneMinClasse);
 		System.out.format("Moyenne max. de la classe ayant %d eleves = %.2f \n", nbEleves, moyenneMaxClasse);
 

@@ -1,12 +1,12 @@
-/*
-Un libraire veut créer un programme pour archiver des données sur les livres qu'il vend. 
-Ces données sont: le titre du livre, le nom de l'auteur et l'éditeur.
-Pour chaque livre, les données le concernant seront enregistrées sous forme d'une chaîne de caractères 
+ï»¿/*
+Un libraire veut crÃ©er un programme pour archiver des donnÃ©es sur les livres qu'il vend. 
+Ces donnÃ©es sont: le titre du livre, le nom de l'auteur et l'Ã©diteur.
+Pour chaque livre, les donnÃ©es le concernant seront enregistrÃ©es sous forme d'une chaÃ®ne de caractÃ¨res 
 avec le format suivant: Nom du livre/AUTEUR/EDITEUR*.
-a) Rédiger un code pour enregistrer les données de N livres, N étant un nombre fourni par l'utilisateur. 
-On suppose que l'utilisateur remplit convenablement les données.
-b) Compléter le code pour qu'il affiche les livres publiés par un éditeur donné, lorsque l'utilisateur indique un nom d'éditeur. 
-Le code devra être rédigé de façon telle que l'utilisateur puisse effectuer autant de demandes qu'il le souhaite.
+a) RÃ©diger un code pour enregistrer les donnÃ©es de N livres, N Ã©tant un nombre fourni par l'utilisateur. 
+On suppose que l'utilisateur remplit convenablement les donnÃ©es.
+b) ComplÃ©ter le code pour qu'il affiche les livres publiÃ©s par un Ã©diteur donnÃ©, lorsque l'utilisateur indique un nom d'Ã©diteur. 
+Le code devra Ãªtre rÃ©digÃ© de faÃ§on telle que l'utilisateur puisse effectuer autant de demandes qu'il le souhaite.
 */
 
 public class NFA031_Devoir4_cata {
@@ -17,25 +17,25 @@ public class NFA031_Devoir4_cata {
 		// imprimer le tableau des enregistrements
 		imprimerEnregistrements(tab);
 
-		// parcourir chaque string infoLivre, pour chercher si l'éditeur existe
+		// parcourir chaque string infoLivre, pour chercher si l'Ã©diteur existe
 		// s'il existe, extraire les livres
 
 		String editeurARechercher;
 
-		// demander l'éditeur dans une boucle et retourner ses livres, jusqu'à
-		// ce que l'utilisateur décide d'arrêter
+		// demander l'Ã©diteur dans une boucle et retourner ses livres, jusqu'Ã 
+		// ce que l'utilisateur dÃ©cide d'arrÃªter
 		do {
 			System.out.print("Donner un editeur pour retourner ses livres (ou terminer avec *) : ");
 			editeurARechercher = Lire.S();
 
 			chercherParEditeur(tab, editeurARechercher);
 
-			// repéter jusqu'à ce que l'utilisateur décide d'arrêter
+			// repÃ©ter jusqu'Ã  ce que l'utilisateur dÃ©cide d'arrÃªter
 		} while (!editeurARechercher.equals("*"));
 
 	}
 
-	// en mode test le tableau est initialisé avec des donnés en dur
+	// en mode test le tableau est initialisÃ© avec des donnÃ©s en dur
 	private static String[] enregistrerLivres(boolean modeTest) {
 		if (modeTest) {
 			String[] tab = { "n/a/e", "n2/a2/e2", "n3/a3/e" };
@@ -47,8 +47,8 @@ public class NFA031_Devoir4_cata {
 			int nombreLivres;
 			String infoLivre;
 
-			// demander le nombre de livres à archiver
-			System.out.print("Donner le nombre de livres à archiver : ");
+			// demander le nombre de livres Ã  archiver
+			System.out.print("Donner le nombre de livres Ã  archiver : ");
 			nombreLivres = Lire.i();
 			String[] tab = new String[nombreLivres];
 
@@ -57,11 +57,11 @@ public class NFA031_Devoir4_cata {
 			// AUTEUR
 			// EDITEUR
 			for (int i = 0; i < tab.length; i++) {
-				System.out.print("Donner le Nom du livre numéro " + i + " : ");
+				System.out.print("Donner le Nom du livre numÃ©ro " + i + " : ");
 				nomLivre = Lire.S();
-				System.out.print("Donner l'Auteur du livre numéro " + i + " : ");
+				System.out.print("Donner l'Auteur du livre numÃ©ro " + i + " : ");
 				auteur = Lire.S();
-				System.out.print("Donner l'Editeur du livre numéro " + i + " : ");
+				System.out.print("Donner l'Editeur du livre numÃ©ro " + i + " : ");
 				editeur = Lire.S();
 
 				// pour chaque livre stocker dans un tableau les informations en
@@ -95,7 +95,7 @@ public class NFA031_Devoir4_cata {
 			// l'editeur se trouve sur position 2 dans le tableau fragments
 			editeurCourrant = fragments[2];
 
-			// vérifier si l'éditeur recherché est égal à l'éditeur enregistré
+			// vÃ©rifier si l'Ã©diteur recherchÃ© est Ã©gal Ã  l'Ã©diteur enregistrÃ©
 			if (editeurARechercher.equals(editeurCourrant)) {
 				auteurCourrant = fragments[1];
 				nomLivreCourrant = fragments[0];

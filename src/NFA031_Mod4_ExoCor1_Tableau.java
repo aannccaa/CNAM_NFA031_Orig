@@ -1,10 +1,10 @@
-/*
-a) Ecrire un programme qui demande à l’utilisateur une série de N nombres entiers
+ï»¿/*
+a) Ecrire un programme qui demande Ã  lâ€™utilisateur une sÃ©rie de N nombres entiers
 strictement positifs et qui les stocke dans un tableau.
 b) Calculer la valeur maximale atteinte par les nombres du tableau.
-c) Ajouter à votre programme la détermination du nombre d’entiers qui sont égaux à
-cette valeur maximale, ainsi que la détermination des indices auxquels ils sont situés.
-d) Ajouter à votre programme le calcul de la moyenne des nombres du tableau.
+c) Ajouter Ã  votre programme la dÃ©termination du nombre dâ€™entiers qui sont Ã©gaux Ã 
+cette valeur maximale, ainsi que la dÃ©termination des indices auxquels ils sont situÃ©s.
+d) Ajouter Ã  votre programme le calcul de la moyenne des nombres du tableau.
 */
 
 public class NFA031_Mod4_ExoCor1_Tableau {
@@ -20,7 +20,7 @@ public class NFA031_Mod4_ExoCor1_Tableau {
 		nbEntiers = Lire.i();
 		int tab[] = new int[nbEntiers];
 		for (int i = 0; i < nbEntiers; i++) {
-			System.out.print("Donner l'entier n° " + (i + 1) + " : ");
+			System.out.print("Donner l'entier nÂ° " + (i + 1) + " : ");
 			tab[i] = Lire.i();
 			sommeNbEntiers = sommeNbEntiers + tab[i];
 
@@ -36,10 +36,10 @@ public class NFA031_Mod4_ExoCor1_Tableau {
 		}
 		System.out.println("La valeur max. des entiers du tableau est " + valMax);
 
-		System.out.print("Las liste des indices(commencent avec 0) sur leques les val max. sont situés : [ ");
+		System.out.print("Las liste des indices(commencent avec 0) sur leques les val max. sont situÃ©s : [ ");
 
 		separateur = "";
-		// optionnel écrire les indices des val max. dans un tableau
+		// optionnel Ã©crire les indices des val max. dans un tableau
 		int tabIndices[] = new int[nbEntiersEgauxValMax];
 		int premierePositionLibreDansLeTabIndices = 0;
 		for (int i = 0; i < nbEntiers; i++) {
@@ -47,9 +47,9 @@ public class NFA031_Mod4_ExoCor1_Tableau {
 				// optionnel: sauvegarde des indices dans le tableau tabIndices
 				tabIndices[premierePositionLibreDansLeTabIndices] = i;
 				premierePositionLibreDansLeTabIndices = premierePositionLibreDansLeTabIndices + 1;
-				// écrire les indices
+				// Ã©crire les indices
 				System.out.print(separateur + i);
-				// Premiere fois le séparateur est vide, les prochaines fois ", "
+				// Premiere fois le sÃ©parateur est vide, les prochaines fois ", "
 				separateur = ", ";
 			}
 		}

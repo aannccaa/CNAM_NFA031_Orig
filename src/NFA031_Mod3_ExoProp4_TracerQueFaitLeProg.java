@@ -1,5 +1,5 @@
-/*
-A l’aide d’un tableau retraçant l’évolution des variables et des expressions, 
+ï»¿/*
+A lâ€™aide dâ€™un tableau retraÃ§ant lâ€™Ã©volution des variables et des expressions, 
 indiquez ce que fait le programme suivant :
  */
 

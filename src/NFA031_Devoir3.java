@@ -1,12 +1,12 @@
-/*
-L'organisateur d'un tournoi de lancer de javelot veut créer un programme pour archiver les résultats de ce tournoi. 
+ï»¿/*
+L'organisateur d'un tournoi de lancer de javelot veut crÃ©er un programme pour archiver les rÃ©sultats de ce tournoi. 
 Chaque sportif effectue 3 lancers. 
-Le programme devra stocker les résultats de N sportifs, N étant un nombre fourni par l'utilisateur du programme. 
-a) Ecrire un code qui permet de stocker les résultats des 3 lancers de chacun des N sportifs dans un tableau à deux dimensions. 
-Un sportif sera identifié par un numéro de dossard compris entre 0 et N-1.
-b) Compléter le code pour qu'il calcule et affiche la moyenne des 3 lancers de chaque sportif. 
-c) Compléter le code pour qu'il calcule la valeur M la plus grande des moyennes obtenues par ces sportifs 
-et affiche le ou les numéros des sportifs ayant atteint cette valeur M.  
+Le programme devra stocker les rÃ©sultats de N sportifs, N Ã©tant un nombre fourni par l'utilisateur du programme. 
+a) Ecrire un code qui permet de stocker les rÃ©sultats des 3 lancers de chacun des N sportifs dans un tableau Ã  deux dimensions. 
+Un sportif sera identifiÃ© par un numÃ©ro de dossard compris entre 0 et N-1.
+b) ComplÃ©ter le code pour qu'il calcule et affiche la moyenne des 3 lancers de chaque sportif. 
+c) ComplÃ©ter le code pour qu'il calcule la valeur M la plus grande des moyennes obtenues par ces sportifs 
+et affiche le ou les numÃ©ros des sportifs ayant atteint cette valeur M.  
 
 */
 
@@ -73,7 +73,7 @@ public class NFA031_Devoir3 {
 		double[][] tab = new double[nbSportifs][nbLancers];
 		for (int i = 0; i < nbSportifs; i++) {
 			for (int j = 0; j < nbLancers; j++) {
-				System.out.print("Pour le Sportif n° " + i + " donner le résultat n° " + j + " : ");
+				System.out.print("Pour le Sportif nÂ° " + i + " donner le rÃ©sultat nÂ° " + j + " : ");
 				tab[i][j] = Lire.d();
 
 			}
@@ -106,7 +106,7 @@ public class NFA031_Devoir3 {
 		return tabMoyennes;
 	}
 
-	// calculer le maximum des élements d'un tableau
+	// calculer le maximum des Ã©lements d'un tableau
 	public static double maxElements(double[] tab) {
 		double max = Double.MIN_VALUE;
 		for (int i = 0; i < tab.length; i++) {

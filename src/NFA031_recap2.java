@@ -1,7 +1,7 @@
-/*
+ï»¿/*
 Exercice 2
 a) Ecrire un code qui permet de saisir N lettres majuscules pour les placer dans un tableau . 
-b) On appelle 'plateau' une suite de majuscules contiguës et identiques . 
+b) On appelle 'plateau' une suite de majuscules contiguÃ«s et identiques . 
     Ecrire un code qui calcule le nombre de plateaux contenus dans le tableau .
        Exemple : si le tableau est le suivant : {'A' , 'B' , 'B' , 'T' , 'V' , 'V' , 'V' , 'A' , 'B' , 'B'} , le
                          programme indiquera qu'il y a 3 plateaux .
@@ -14,7 +14,7 @@ public class NFA031_recap2 {
 		// char[] tab = { 'A', 'B', 'B', 'T', 'V', 'V', 'V', 'A', 'B', 'B' };
 		
 		
-		System.out.println("Donner le nombre de lettres à mémoriser :");
+		System.out.println("Donner le nombre de lettres Ã  mÃ©moriser :");
 		nombreLettres = Lire.i();
 		char[] tab = new char[nombreLettres];
 		

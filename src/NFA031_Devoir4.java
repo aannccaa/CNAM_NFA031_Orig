@@ -1,12 +1,12 @@
-/*
-Un libraire veut créer un programme pour archiver des données sur les livres qu'il vend. 
-Ces données sont: le titre du livre, le nom de l'auteur et l'éditeur.
-Pour chaque livre, les données le concernant seront enregistrées sous forme d'une chaîne de caractères 
+ï»¿/*
+Un libraire veut crÃ©er un programme pour archiver des donnÃ©es sur les livres qu'il vend. 
+Ces donnÃ©es sont: le titre du livre, le nom de l'auteur et l'Ã©diteur.
+Pour chaque livre, les donnÃ©es le concernant seront enregistrÃ©es sous forme d'une chaÃ®ne de caractÃ¨res 
 avec le format suivant: Nom du livre/AUTEUR/EDITEUR*.
-a) Rédiger un code pour enregistrer les données de N livres, N étant un nombre fourni par l'utilisateur. 
-On suppose que l'utilisateur remplit convenablement les données.
-b) Compléter le code pour qu'il affiche les livres publiés par un éditeur donné, lorsque l'utilisateur indique un nom d'éditeur. 
-Le code devra être rédigé de façon telle que l'utilisateur puisse effectuer autant de demandes qu'il le souhaite.
+a) RÃ©diger un code pour enregistrer les donnÃ©es de N livres, N Ã©tant un nombre fourni par l'utilisateur. 
+On suppose que l'utilisateur remplit convenablement les donnÃ©es.
+b) ComplÃ©ter le code pour qu'il affiche les livres publiÃ©s par un Ã©diteur donnÃ©, lorsque l'utilisateur indique un nom d'Ã©diteur. 
+Le code devra Ãªtre rÃ©digÃ© de faÃ§on telle que l'utilisateur puisse effectuer autant de demandes qu'il le souhaite.
 */
 
 public class NFA031_Devoir4 {
@@ -18,20 +18,20 @@ public class NFA031_Devoir4 {
 		// imprimer le tableau des enregistrements de livre
 		imprimerEnregistrements(tab);
 
-		// pour un éditeur donnée, parcourir chaque string infoLivre (Nom du livre/AUTEUR/EDITEUR) pour chercher si l'éditeur existe et 
+		// pour un Ã©diteur donnÃ©e, parcourir chaque string infoLivre (Nom du livre/AUTEUR/EDITEUR) pour chercher si l'Ã©diteur existe et 
 		// s'il existe, extraire ses livres
 		String editeurARechercher;
-		// demander l'éditeur dans une boucle et retourner ses livres, jusqu'à
-		// ce que l'utilisateur décide d'arrêter
+		// demander l'Ã©diteur dans une boucle et retourner ses livres, jusqu'Ã 
+		// ce que l'utilisateur dÃ©cide d'arrÃªter
 		do {
 			System.out.print("Donner un editeur pour retourner ses livres (ou terminer avec *) : ");
 			editeurARechercher = Lire.S();
 
 			// parcourir chaque string infoLivre, pour chercher si
-			// l'éditeur existe et s'il existe, extraire les livres
+			// l'Ã©diteur existe et s'il existe, extraire les livres
 			chercherParEditeur(tab, editeurARechercher);
 
-			// repéter jusqu'à ce que l'utilisateur décide d'arrêter
+			// repÃ©ter jusqu'Ã  ce que l'utilisateur dÃ©cide d'arrÃªter
 		} while (!editeurARechercher.equals("*"));
 
 	}
@@ -42,27 +42,27 @@ public class NFA031_Devoir4 {
 		String auteur;
 		String editeur;
 		int nombreLivres;
-		String infoLivre; // chaine de charactères contenant "Nom du livre/AUTEUR/EDITEUR"
+		String infoLivre; // chaine de charactÃ¨res contenant "Nom du livre/AUTEUR/EDITEUR"
 
-		// demander le nombre de livres à archiver
-		System.out.print("Donner le nombre de livres à archiver : ");
+		// demander le nombre de livres Ã  archiver
+		System.out.print("Donner le nombre de livres Ã  archiver : ");
 		nombreLivres = Lire.i();
-		// créer et initialiser le tableau des enregistrements
+		// crÃ©er et initialiser le tableau des enregistrements
 		String[] tab = new String[nombreLivres];
 
-		// pour chaque livre à archiver, demander:
+		// pour chaque livre Ã  archiver, demander:
 		// Nom du livre
 		// AUTEUR
 		// EDITEUR
 		for (int i = 0; i < tab.length; i++) {
-			System.out.print("Donner le Nom du livre numéro " + i + " : ");
+			System.out.print("Donner le Nom du livre numÃ©ro " + i + " : ");
 			nomLivre = Lire.S();
-			System.out.print("Donner l'Auteur du livre numéro " + i + " : ");
+			System.out.print("Donner l'Auteur du livre numÃ©ro " + i + " : ");
 			auteur = Lire.S();
-			System.out.print("Donner l'Editeur du livre numéro " + i + " : ");
+			System.out.print("Donner l'Editeur du livre numÃ©ro " + i + " : ");
 			editeur = Lire.S();
 
-			// pour chaque livre à archiver, stocker dans un tableau les informations en format string
+			// pour chaque livre Ã  archiver, stocker dans un tableau les informations en format string
 			// "Nom du livre/AUTEUR/EDITEUR"
 			infoLivre = nomLivre + "/" + auteur + "/" + editeur;
 			tab[i] = infoLivre;
@@ -81,7 +81,7 @@ public class NFA031_Devoir4 {
 	}
 
 	// fonction pour parcourir chaque string infoLivre, pour chercher si
-	// l'éditeur existe et s'il existe, extraire ses livres
+	// l'Ã©diteur existe et s'il existe, extraire ses livres
 	private static void chercherParEditeur(String[] tab, String editeurARechercher) {
 		String editeurCourrant;
 		String livreCourrant;
@@ -94,7 +94,7 @@ public class NFA031_Devoir4 {
 			// l'editeur se trouve sur position 2 dans le tableau fragments
 			editeurCourrant = fragments[2];
 
-			// vérifier si l'éditeur recherché est égal à l'éditeur enregistré
+			// vÃ©rifier si l'Ã©diteur recherchÃ© est Ã©gal Ã  l'Ã©diteur enregistrÃ©
 			if (editeurARechercher.equals(editeurCourrant)) {
 				auteurCourrant = fragments[1];
 				nomLivreCourrant = fragments[0];
@@ -103,36 +103,36 @@ public class NFA031_Devoir4 {
 		}
 	}
 
-	// fonction pour fragmenter une chaîne de charactères donnée
-	// (par rapport à un séparateur)
+	// fonction pour fragmenter une chaÃ®ne de charactÃ¨res donnÃ©e
+	// (par rapport Ã  un sÃ©parateur)
 	// et stocker les fragments dans un tableau
 	public static String[] fragmenter(char sep, String s) {
 		String[] result;
 		int compteur = 0;
-		// determiner le nombre des séparateurs dans un string
+		// determiner le nombre des sÃ©parateurs dans un string
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == sep) {
 				compteur++;
 			}
 		}
-		// determiner le nombre de fragments (= nb. séparateurs + 1)
+		// determiner le nombre de fragments (= nb. sÃ©parateurs + 1)
 		int nobmreFragments = compteur + 1;
 
-		// créer et initialiser le tableau des fragments
+		// crÃ©er et initialiser le tableau des fragments
 		result = new String[nobmreFragments];
 
-		// soustraire les mots compris entre les séparateurs et les stocker dans un tableau
+		// soustraire les mots compris entre les sÃ©parateurs et les stocker dans un tableau
 		String mot;
 		int start = 0;
 		int positionLibre = 0;
 		for (int i = 0; i <= s.length(); i++) {
-			// si on arrive à la fin du tableau, ou qu'on a trouvé un séparateur
+			// si on arrive Ã  la fin du tableau, ou qu'on a trouvÃ© un sÃ©parateur
 			if (i == s.length() || s.charAt(i) == sep) {
 				int positionSeparateur = i;
-				// soustraire le mot par rapport à la délimitation
+				// soustraire le mot par rapport Ã  la dÃ©limitation
 				mot = s.substring(start, positionSeparateur);
 
-				// stocker le mot extrait dans un tableau, à la première position libre
+				// stocker le mot extrait dans un tableau, Ã  la premiÃ¨re position libre
 				result[positionLibre] = mot;
 
 				positionLibre++;

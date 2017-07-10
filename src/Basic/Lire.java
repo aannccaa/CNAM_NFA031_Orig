@@ -1,4 +1,4 @@
-package Basic;
+ï»¿package Basic;
 
 import java.io.*;
 import java.util.*;
@@ -27,7 +27,7 @@ public class Lire {
 		try {
 			x = Byte.parseByte(S());
 		} catch (NumberFormatException e) {
-			System.out.println("Format numérique incorrect");
+			System.out.println("Format numÃ©rique incorrect");
 			System.exit(0);
 		}
 		return x;
@@ -39,7 +39,7 @@ public class Lire {
 		try {
 			x = Short.parseShort(S());
 		} catch (NumberFormatException e) {
-			System.out.println("Format numérique incorrect");
+			System.out.println("Format numÃ©rique incorrect");
 			System.exit(0);
 		}
 		return x;
@@ -53,7 +53,7 @@ public class Lire {
 				x = Integer.parseInt(S());
 				return x;
 			} catch (NumberFormatException e) {
-				System.out.print("Format numérique incorrect. Repetez la saisie : ");
+				System.out.print("Format numÃ©rique incorrect. Repetez la saisie : ");
 			}
 		}
 	}
@@ -64,7 +64,7 @@ public class Lire {
 		try {
 			x = Long.parseLong(S());
 		} catch (NumberFormatException e) {
-			System.out.println("Format numérique incorrect");
+			System.out.println("Format numÃ©rique incorrect");
 			System.exit(0);
 		}
 		return x;
@@ -76,7 +76,7 @@ public class Lire {
 		try {
 			x = Double.valueOf(S()).doubleValue();
 		} catch (NumberFormatException e) {
-			System.out.println("Format numérique incorrect");
+			System.out.println("Format numÃ©rique incorrect");
 			System.exit(0);
 		}
 		return x;
@@ -88,7 +88,7 @@ public class Lire {
 		try {
 			x = Double.valueOf(S()).floatValue();
 		} catch (NumberFormatException e) {
-			System.out.println("Format numérique incorrect");
+			System.out.println("Format numÃ©rique incorrect");
 			System.exit(0);
 		}
 		return x;

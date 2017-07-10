@@ -1,4 +1,4 @@
-
+ï»¿
 public class NFA031_Mod4_5c_TableauTriParBulle_FOR_FOR {
 
 	public static void main(String[] args) {
@@ -10,19 +10,19 @@ public class NFA031_Mod4_5c_TableauTriParBulle_FOR_FOR {
 		
 		for (i = 0; i < longueurTableau-1; i++) {
 			for (j = 0; j < longueurTableau-1; j++) {
-				// Teste si 2 éléments successifs sont dans le bon ordre ou non
+				// Teste si 2 Ã©lÃ©ments successifs sont dans le bon ordre ou non
 				if (T[j] > T[j+1]) {
-					// s'ils ne le sont pas, on échange leurs positions
+					// s'ils ne le sont pas, on Ã©change leurs positions
 					temp = T[j];
 					T[j] = T[j+1];
 					T[j+1] = temp;
-					/* Le tableau n'est toujours pas trié */
+					/* Le tableau n'est toujours pas triÃ© */
 				}
 			}
 		}
 		
-		// afficher le tableau trié:
-		System.out.print("Le tableau trié par ordre croissante: [");
+		// afficher le tableau triÃ©:
+		System.out.print("Le tableau triÃ© par ordre croissante: [");
 		separateur = "";
 		for (i = 0; i < longueurTableau; i++) {
 			System.out.print(separateur + T[i]);

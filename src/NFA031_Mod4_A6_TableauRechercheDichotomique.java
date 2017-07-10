@@ -1,4 +1,4 @@
-
+﻿
 public class NFA031_Mod4_A6_TableauRechercheDichotomique {
 
 	public static void main(String[] args) {

@@ -1,5 +1,5 @@
-/*
- Ecrire un algorithme qui permet de saisir deux temps et affiche leur somme exprim�e en
+﻿/*
+ Ecrire un algorithme qui permet de saisir deux temps et affiche leur somme exprimée en
 heures, minutes et secondes.
 Exemple :
 Temps 1 : 2 : 30 : 50

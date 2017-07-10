@@ -1,8 +1,8 @@
-/*
+ï»¿/*
 Exercice 3
-Un nombre est dit premier s’il n’admet comme diviseurs que 1 et lui-même. 
+Un nombre est dit premier sâ€™il nâ€™admet comme diviseurs que 1 et lui-mÃªme. 
 Par exemple, les nombres 1, 2 , 3 , 5 et 7 sont premiers.
-Ecrire un algorithme qui indique si un nombre fourni par l’utilisateur est, ou non, premier .
+Ecrire un algorithme qui indique si un nombre fourni par lâ€™utilisateur est, ou non, premier .
  */
 
 public class NFA031_Mod3_ExoCor3_NbPrim {
@@ -10,7 +10,7 @@ public class NFA031_Mod3_ExoCor3_NbPrim {
 		int n;
 		boolean premier=true; //numar prim
 		
-		System.out.print("Donner un numéro entier n positiv > 0: ");
+		System.out.print("Donner un numÃ©ro entier n positiv > 0: ");
 		n = Lire.i();
 		if (n>=2) {
 			for (int i=2; i<n; i=i+1) {
@@ -20,9 +20,9 @@ public class NFA031_Mod3_ExoCor3_NbPrim {
 			}
 		}
 		if (premier == true) {
-			System.out.println("Le numéro " + n + " est prim.");
+			System.out.println("Le numÃ©ro " + n + " est prim.");
 		} else {
-			System.out.println("Le numéro " + n + " n'est pas prim.");	
+			System.out.println("Le numÃ©ro " + n + " n'est pas prim.");	
 		}
 		}
 	}

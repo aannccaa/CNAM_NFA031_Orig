@@ -1,4 +1,4 @@
-/*
+﻿/*
  Le responsable du parking d'une entreprise veut créer un programme pour
 archiver les codes d'accès au parking qu'il délivre aux salariés .
 Un code d'accès est composé de deux lettres majuscules , suivies de 9 chiffres et

@@ -1,6 +1,6 @@
-/*
-calculer la division entière d’un nombre par un autre en utilisant la soustraction
-pour calculer le résultat sans utiliser l’opérateur /.
+ï»¿/*
+calculer la division entiÃ¨re dâ€™un nombre par un autre en utilisant la soustraction
+pour calculer le rÃ©sultat sans utiliser lâ€™opÃ©rateur /.
  */
 public class NFA031_Mod5_Fonctions_DeptInfo_DivisionEntiere {
 

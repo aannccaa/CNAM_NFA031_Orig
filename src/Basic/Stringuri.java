@@ -1,4 +1,4 @@
-package Basic;
+ï»¿package Basic;
 
 public class Stringuri {
 
@@ -351,7 +351,7 @@ public class Stringuri {
 		return result;
 	}
 
-	// Ecrivez un programme qui affiche un carre de 10 lignes et 10 colonnes o ´
+	// Ecrivez un programme qui affiche un carre de 10 lignes et 10 colonnes o Â´
 	// u la premi ` ere cas contient 1 et `
 	// ensuite chaque case contient 1 de plus que la precedente.
 	// 1 2 3 4 5 6 7 8 9 10
@@ -393,8 +393,8 @@ public class Stringuri {
 	 **
 	 ****
 	 * Une ligne sur deux, il y a 4 etoiles, sur les autres lignes, il y en a
-	 * deux, d ´ ecal ´ ees d’un espace. ´ Dans le programme le nombre de lignes
-	 * affichee est entr ´ e au clavier. Le dessin ci-dessus repr ´ esente le ´
+	 * deux, d Â´ ecal Â´ ees dâ€™un espace. Â´ Dans le programme le nombre de lignes
+	 * affichee est entr Â´ e au clavier. Le dessin ci-dessus repr Â´ esente le Â´
 	 * cas ou ce nombre vaut 7.
 	 */
 

@@ -1,11 +1,11 @@
-/*
-a) Ecrire un code qui permet à un utilisateur de rentrer N entiers
-strictement positifs dans un tableau ‘tab’ , la taille N du tableau étant à choisir par
-l’utilisateur .
-b) Ecrire un code qui calcule la valeur maximale ‘MAX’ des entiers du tableau .
+ï»¿/*
+a) Ecrire un code qui permet Ã  un utilisateur de rentrer N entiers
+strictement positifs dans un tableau â€˜tabâ€™ , la taille N du tableau Ã©tant Ã  choisir par
+lâ€™utilisateur .
+b) Ecrire un code qui calcule la valeur maximale â€˜MAXâ€™ des entiers du tableau .
 c) Ecrire un code qui calcule K , le nombre d'occurrences de cette valeur maximale .
-d) Déclarer un tableau 'tabbis' , de taille N+K et le remplir avec les valeurs du
-tableau 'tab' en insérant la valeur '0' après chaque occurrence de 'MAX' .
+d) DÃ©clarer un tableau 'tabbis' , de taille N+K et le remplir avec les valeurs du
+tableau 'tab' en insÃ©rant la valeur '0' aprÃ¨s chaque occurrence de 'MAX' .
 Par exemple , si le tableau 'tab' contient les valeurs : 3 , 7 , 2 , 5 , 7 , 1 , 7 , 3 , 
 le tableau 'tabbis' devra contenir les valeurs : 3 , 7 , 0 , 2 , 5 , 7 , 0 , 1 , 7 , 0 , 3
 */
@@ -44,7 +44,7 @@ public class NFA031_Exam1_2017_Ex2 {
 		return N;
 	}
 
-	// remplir le tableau avec N valeurs entières:
+	// remplir le tableau avec N valeurs entiÃ¨res:
 	public static int[] remplirTableau(int N) {
 		int[] tab = new int[N];
 		{
@@ -93,7 +93,7 @@ public class NFA031_Exam1_2017_Ex2 {
 		return nbOccurencesMax;
 	}
 
-	// créer tabbis
+	// crÃ©er tabbis
 	public static int[] creerTabbis(int[] tab) {
 		int K = calculerOccurencesMax(tab);
 		int max = calculerMax(tab);
