@@ -16,12 +16,12 @@ pouvez utiliser la syntaxe : Character.getNumericValue(c) .
 
 public class NFA031_Exam1_2017_Ex5 {
 
+	public static String FORMAT = "XX00X";
+	public static String MSG_FORMAT = "2 maj 9 chiffres 1 maj";
+	
 	public static void main(String[] args) {
-
-		String code = introduireCode();
-		afficherEtatCode(code);
-
-		String[] tab = creerTab(code);
+		int nbCodes = 2;
+		String[] tab = creerTab(nbCodes);
 
 		afficherTab(tab);
 	}
@@ -29,48 +29,84 @@ public class NFA031_Exam1_2017_Ex5 {
 	// introduire le code
 	public static String introduireCode() {
 		String code;
-		System.out.print("Donner un code: 2 majuscule, 9 chiffres, 1 majuscule : ");
-		code = Lire.S();
+		boolean isCodeOK;
+
+		do {
+			System.out.print("Donner un code "+ MSG_FORMAT +"  : ");
+			code = Lire.S();
+			isCodeOK = verifierCode(code);
+			if (! isCodeOK) {
+				System.out.println("Code incorrect !");
+			}
+		} while (!isCodeOK);
 
 		return code;
 	}
 
-	public static boolean verifierCode(String code) {
-		boolean isCodeOK;
+	public static boolean verifierCode(String code)  {
+		int formatLen = FORMAT.length();
+		if(code.length() != formatLen) {
+			return false;
+		}
+		for(int i = 0; i < formatLen; i++) {
+			char current = code.charAt(i);
+			char currentFormat = FORMAT.charAt(i);
+			switch(currentFormat) {
+				case 'X':
+					if(!Character.isAlphabetic(current) || !Character.isUpperCase(current)) {
+						return false;
+					}
+					break;
+				case '0':
+					if(!Character.isDigit(current)) {
+						return false;
+					}
+					break;
+				default:
+					System.out.println("Invalid format");
+					return false;
+			}
+		}
+		return true;
+	}
 
-		if ((code.length() == 12) && (code.equals(code.toUpperCase())) && (Character.isLetter(code.charAt(0)))
-				&& (Character.isLetter(code.charAt(1))) && (Character.isDigit(code.charAt(2)))
-				&& (Character.isDigit(code.charAt(3))) && (Character.isDigit(code.charAt(4)))
-				&& (Character.isDigit(code.charAt(5))) && (Character.isDigit(code.charAt(6)))
-				&& (Character.isDigit(code.charAt(7))) && (Character.isDigit(code.charAt(8)))
-				&& (Character.isDigit(code.charAt(9))) && (Character.isDigit(code.charAt(10)))
-				&& (Character.isLetter(code.charAt(11)))) {
-			isCodeOK = true;
-		} else {
-			isCodeOK = false;
+	public static boolean verifierCode2(String code)  {
+		boolean isCodeOK = false;
+		char c;
+		if (
+				(code.length() == 5) 
+				&& (code.equals(code.toUpperCase()))) {
+					isCodeOK = true;
+		}
+		if(isCodeOK) {
+			for (int i = 0; i < 2; i++) {
+				c = code.charAt(i);
+				isCodeOK = isCodeOK &&  Character.isLetter(c);
+			}
+		}
+			
+		if(isCodeOK) {
+			for (int i = 2; i < 11; i++) {
+				c = code.charAt(i);
+				isCodeOK = isCodeOK &&  Character.isDigit(c);
+			}
+		}
+		if(isCodeOK) {
+			for (int i = 11; i < 12; i++) {
+				c = code.charAt(i);
+				isCodeOK = isCodeOK &&  Character.isLetter(c);
+			}
 		}
 
 		return isCodeOK;
+	
 	}
-
-	public static void afficherEtatCode(String code) {
-		if (verifierCode(code) == true) {
-			System.out.println("Le code introduit est OK");
-		} else {
-			System.out.println("Le code introduit est NOK");
-		}
-
-	}
-
 	// creer tab
-	public static String[] creerTab(String code) {
-		int nbCodes = 2;
+	public static String[] creerTab(int nbCodes) {
 		String[] tab = new String[nbCodes];
 
-		while (verifierCode(code) == true) {
-			for (int i = 0; i < nbCodes; i++) {
-				tab[i] = code;
-			}
+		for (int i = 0; i < nbCodes; i++) {
+			tab[i] = introduireCode();
 		}
 		return tab;
 	}
@@ -79,9 +115,9 @@ public class NFA031_Exam1_2017_Ex5 {
 	public static void afficherTab(String[] tab) {
 		String sep = "";
 		System.out.print("{");
-		for (int i = 0; i < 9; i++) {
+		for (int i = 0; i < tab.length; i++) {
 			System.out.print(sep + tab[i]);
-			sep = ";";
+			sep = "; ";
 		}
 		System.out.print("}");
 	}
