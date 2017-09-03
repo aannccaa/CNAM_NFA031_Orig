@@ -11,7 +11,7 @@ public class NFA031_Mod3_ExempleB1_Ristourne_WHILE_DO {
 	public static void main(String[] args) {
 		double prix;
 		char choix;
-		//System.out.print("Voulez-vous faire un calcul (O/N) ? ");
+		System.out.print("Voulez-vous faire un calcul (O/N) ? ");
 		//transforme le charactère entré en majuscule:
 		choix = Character.toUpperCase(Lire.c());
 		while (choix == 'O') {

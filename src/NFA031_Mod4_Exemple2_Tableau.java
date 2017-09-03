@@ -17,7 +17,7 @@ public class NFA031_Mod4_Exemple2_Tableau {
 		String decision;
 		double tab[] = new double[nbEleves];
 
-		// calcul moyenne pour chaque élève:
+		//a) calcul moyenne pour chaque élève:
 		for (i = 0; i < nbEleves; i++) {
 			System.out.print("Eleve " + (i + 1) + ", donner la note en Mathématique : ");
 			noteMathEleve = Lire.d();
@@ -29,8 +29,12 @@ public class NFA031_Mod4_Exemple2_Tableau {
 			moyenneNotesEleve = (noteMathEleve * coefMath + noteFraEleve * coefFra + noteInfoEleve * coefInfo)
 					/ (coefMath + coefFra + coefInfo);
 			System.out.println("La moyenne des notes de l'elève " + (i + 1) + " = " + moyenneNotesEleve);
-
-			// Decisions admission si moyenne de l'eleve >=10
+			
+			// ranger les moyennes des élèves dans un tableau:
+						tab[i] = moyenneNotesEleve;
+						
+						
+			//b) Decisions admission si moyenne de l'eleve >=10
 			if (moyenneNotesEleve >= 10) {
 				decision = "Admis";
 			} else {
@@ -38,10 +42,6 @@ public class NFA031_Mod4_Exemple2_Tableau {
 			}
 			System.out.println("=> Eleve " + (i + 1) + ": " + decision);
 			sommeMoyennesEleves = sommeMoyennesEleves + moyenneNotesEleve;
-
-			// ranger les moyennes des élèves dans un tableau:
-			tab[i] = moyenneNotesEleve;
-
 		}
 
 		// imprimer le tableau des moyennes des notes des élèves:
@@ -53,7 +53,7 @@ public class NFA031_Mod4_Exemple2_Tableau {
 		}
 		System.out.println("]");
 
-		// calcul moyenne générale de la classe:
+		//c) calcul moyenne générale de la classe:
 		moyenneGenClasse = sommeMoyennesEleves / nbEleves;
 		System.out.println("La moyenne générale de la classe de " + nbEleves + " élèves = " + moyenneGenClasse);
 

@@ -1,4 +1,9 @@
-﻿
+﻿/*
+Tri par permutation
+Principe : Ce tri consiste à parcourir le tableau et comparer chaque élément avec 
+les éléments qui le succèdent. S’ils sont dans l’ordre aucune permutation n’est faite, 
+sinon des permutations sont effectuées.
+ */
 public class NFA031_Mod4_A5a_TableauTriParPermutation_FOR_FOR_cata {
 
 	public static void main(String[] args) {

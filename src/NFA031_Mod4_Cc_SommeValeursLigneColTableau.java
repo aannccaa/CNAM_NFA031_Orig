@@ -45,7 +45,7 @@ public class NFA031_Mod4_Cc_SommeValeursLigneColTableau {
 		System.out.print("Donner l'indice de la colonne dont vous souhaitez la somme des valeurs : ");
 		j = Lire.i();
 		int sommeEntiersColonne = 0;
-		for (j = 0; j < 3; j++) {
+		for (i= 0; i < 2; i++) {
 			sommeEntiersColonne = sommeEntiersColonne + tab[i][j];
 		}
 		System.out.println("La somme des entiers de la colonne " + j + " = " + sommeEntiersColonne);

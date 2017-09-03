@@ -1,4 +1,8 @@
-﻿import org.omg.CORBA.portable.ApplicationException;
+﻿/*
+Tri par bulle
+Principe : le nom du tri vient du fait qu'à chaque passage les grands éléments remontent 
+vers la fin du tableau, comme une bulle dans un liquide. 
+*/
 
 public class NFA031_Mod4_5c_TableauTriParBulle_DO_FOR_WHILE {
 

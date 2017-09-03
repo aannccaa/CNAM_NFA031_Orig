@@ -56,12 +56,7 @@ public class NFA031_Mod4_ExoCor1_Tableau {
 
 		System.out.println(" ]");
 
-		for (int i = 0; i < nbEntiers; i++) {
-			if (tab[i] == valMax) {
-			}
-		}
-
-		//
+		
 
 		System.out.println("Le nb d'entiers ayant la val max = " + valMax + " est " + nbEntiersEgauxValMax);
 		moyenneNbEntiers = sommeNbEntiers*1.0 / nbEntiers;

@@ -24,7 +24,7 @@ public class NFA031_Mod3_ExempleB2d1_MinMax_Factures_DO_WHILE {
 			if (mntFacture >= mntFactureMax) {
 				mntFactureMax = mntFacture;
 			}
-			if (mntFactureMax <= mntFactureMin) {
+			if (mntFacture <= mntFactureMin) {
 				mntFactureMin = mntFacture;
 			}
 

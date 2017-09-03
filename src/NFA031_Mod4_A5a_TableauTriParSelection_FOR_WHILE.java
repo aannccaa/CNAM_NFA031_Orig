@@ -1,4 +1,9 @@
-﻿
+﻿/*
+Tri par sélection
+Principe : on parcourt le tableau pour rechercher le plus petit élément; 
+cet élément est permuté avec le premier élément. 
+Le même principe est appliqué jusqu’à la fin du tableau.
+ */
 public class NFA031_Mod4_A5a_TableauTriParSelection_FOR_WHILE {
 
 	public static void main(String[] args) {
@@ -7,11 +12,11 @@ public class NFA031_Mod4_A5a_TableauTriParSelection_FOR_WHILE {
 		int[] T = {5, 7, 3, 1, 6};
 		longueurTableau = T.length;
 		System.out.print("[");
-		for (i = 0; i <= longueurTableau-2; i++) {
+		for (i = 0; i < longueurTableau-1; i++) {
 			min = T[i];
 			indexMin = i;
 			j = i + 1;
-			while (j <= longueurTableau-1) {
+			while (j < longueurTableau) {
 				if (T[j] < min) {
 					min = T[j];
 					indexMin = j;
