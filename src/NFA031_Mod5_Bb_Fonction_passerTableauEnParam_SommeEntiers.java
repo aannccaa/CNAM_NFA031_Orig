@@ -1,5 +1,5 @@
 ﻿/*
-Ecrire un program avec une fonctionne qui passe un tableau en paramettre et qui 
+Ecrire un program avec une fonction qui passe un tableau en paramettre et qui 
 demande 5 entiers à un utilisateur et les stocke dans un tableau. 
 La fonction ‘somme’ reçoit ce tableau en paramètre et retourne la somme des éléments du tableau :
 */
@@ -7,41 +7,42 @@ La fonction ‘somme’ reçoit ce tableau en paramètre et retourne la somme de
 public class NFA031_Mod5_Bb_Fonction_passerTableauEnParam_SommeEntiers {
 
 	public static void main(String[] args) {
-		int nombreEntiers = 3;
-		int nombreEntiers2 = 2;
-		int sommeEntiers;
-		int tab[] = lireTableau("tablou 1", nombreEntiers);
-		int tab2[] = lireTableau("tablou 2", nombreEntiers2);
-
-		sommeEntiers = calcul_somme_entiers_tableau(tab);
-		System.out.println("La somme des " + nombreEntiers + " entiers introduits est = " + sommeEntiers);
-		sommeEntiers = calcul_somme_entiers_tableau(tab2);
-		System.out.println("La somme des " + nombreEntiers + " entiers tableau 2 introduits est = " + sommeEntiers);
+		int nbEntiers= 3;
 		
+		int[] tab = creerTab(nbEntiers);
+		afficherTab1D(tab);
+		
+		int somme = somme(tab);
+		System.out.println("Somme entiers tableau = " + somme);
+	
 	}
-
-	// fonction qui passe un tableau d'entiers en parametre
-	public static int[] lireTableau(String nomTableau, int longueurTableau) {
-		int tableau[] = new int[longueurTableau];
-		if (nomTableau != null && nomTableau != "") {
-			System.out.println("Introduire la liste des entiers appellée  " + nomTableau);
+	
+	public static int[] creerTab(int nbEntiers) {
+		int[] tab = new int[nbEntiers];
+		for(int i =0; i<tab.length; i++) {
+			System.out.print("Donner l'entier n° " + i + " : ");
+			tab[i] = Lire.i();	
+		}
+		return tab;
+	}
+	
+	public static void afficherTab1D(int[] tab) {
+		String sep = "";
+		System.out.print("{");
+		for(int i =0; i<tab.length; i++) {
+			System.out.print(sep + tab[i]);
+			sep = "; ";
+		}
+		System.out.println("}");
+	}
+		
+	public static int somme(int[] tab) {
+		int somme = 0;
+		for(int i=0; i< tab.length; i++) {
+			somme = somme + tab[i];
 		}
 		
-		for (int i = 0; i < longueurTableau; i++) {
-			System.out.print("Donner l'entier numéro: " + (i + 1) + " : ");
-			tableau[i] = Lire.i();
-		}
-		return tableau;
-
-	}
-
-	public static int calcul_somme_entiers_tableau(int tableau[]) {
-
-		int sommeEntiersTableau = 0;
-		for (int i = 0; i < tableau.length; i++) {
-			sommeEntiersTableau = sommeEntiersTableau + tableau[i];
-		}
-		return sommeEntiersTableau;
+		return somme;
 	}
 
 }

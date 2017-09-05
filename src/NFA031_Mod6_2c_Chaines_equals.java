@@ -1,5 +1,5 @@
 ﻿/*
-demander 5 noms à l’utilisateur, les place dans un tableau. 
+demander 5 noms à l’utilisateur, les placer dans un tableau. 
 Le code demande ensuite à l’utilisateur de taper un nom et indique
 si le nom fourni fait ou non partie du tableau
  */

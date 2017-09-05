@@ -1,6 +1,4 @@
-﻿import java.security.InvalidParameterException;
-
-/*
+﻿/*
 Ecrivons par exemple une fonction qui retourne la plus grande valeur d’un tableau
 d’entiers comportant 3 lignes et 4 colonnes
  */

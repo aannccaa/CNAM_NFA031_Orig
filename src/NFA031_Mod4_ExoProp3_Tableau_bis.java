@@ -20,24 +20,32 @@ public class NFA031_Mod4_ExoProp3_Tableau_bis {
 		int[][] tab = creerTab(nbLignes, nbCol);
 		System.out.println("Tab introduit : ");
 		afficherTab2D(tab);
-		
-		//b)
+
+		// b)
 		int[][] tabCopie = copyTab(tab);
-		System.out.println("Tab copié : ");
+		System.out.println("Tab copié (1): ");
 		afficherTab2D(tabCopie);
-		
-		int[] ligneOrdreAsc = ordonnerLigne(tabCopie);
-		System.out.println("Ligne ordonné asc : ");
+
+		int[] ligneExtract = extractLigne(tabCopie);
+		System.out.println("Ligne extraite : ");
+		afficherTab1D(ligneExtract);
+
+		int[] ligneOrdreAsc = ordonnerArrayAsc(ligneExtract);
+		System.out.println("Ligne ordonnée asc : ");
 		afficherTab1D(ligneOrdreAsc);
-		
-		//c)
-		
+
+		// c)
+
 		int[][] tabCopie2 = copyTab(tab);
-		System.out.println("Tab copié : ");
+		System.out.println("Tab copié (2): ");
 		afficherTab2D(tabCopie2);
-		
-		int[] colOrdreDesc = ordonnerCol(tabCopie2);
-		System.out.println("Colonne ordonné desc : ");
+
+		int[] colExtract = extractCol(tabCopie2);
+		System.out.println("Colonne extraite : ");
+		afficherTab1D(colExtract);
+
+		int[] colOrdreDesc = ordonnerArrayDesc(colExtract);
+		System.out.println("Colonne ordonnée desc : ");
 		afficherTab1D(colOrdreDesc);
 
 	}
@@ -69,7 +77,7 @@ public class NFA031_Mod4_ExoProp3_Tableau_bis {
 
 	public static void afficherTab1D(int[] tab) {
 		String sep = "";
-		
+
 		System.out.print("{");
 		for (int i = 0; i < tab.length; i++) {
 			System.out.print(sep + tab[i]);
@@ -77,9 +85,11 @@ public class NFA031_Mod4_ExoProp3_Tableau_bis {
 		}
 		System.out.println("}");
 	}
-	
+
 	public static int[][] copyTab(int[][] tab) {
-		int[][] tabCopie = new int[tab.length][tab[0].length];
+		int nbLignes = tab.length;
+		int nbColonnes = tab[0].length;
+		int[][] tabCopie = new int[nbLignes][nbColonnes];
 		for (int i = 0; i < tab.length; i++) {
 			for (int j = 0; j < tab[i].length; j++) {
 				tabCopie[i][j] = tab[i][j];
@@ -87,32 +97,62 @@ public class NFA031_Mod4_ExoProp3_Tableau_bis {
 		}
 		return tabCopie;
 	}
-	
-	public static int[] ordonnerLigne(int[][] tab){
+
+	public static int[] extractLigne(int[][] tab) {
 		System.out.print("Donner le numéro d'une ligne :");
 		int numLigne = Lire.i();
-		int min = Integer.MAX_VALUE;
-		int[] ligne = new int[numLigne];
-		for(int i=0; i<ligne.length; i++) {
-			if (ligne[i]<min) {
-				min = ligne[i];
-			}
+		int nbColonnes = tab[0].length;
+		int[] ligne = new int[nbColonnes];
+		for (int i = 0; i < ligne.length; i++) {
+			ligne[i] = tab[numLigne][i];
 		}
-		
 		return ligne;
 	}
-	
-	public static int[] ordonnerCol(int[][] tab){
+
+	public static int[] extractCol(int[][] tab) {
 		System.out.print("Donner le numéro d'une col. :");
 		int numCol = Lire.i();
-		int max = Integer.MIN_VALUE;
-		int[] col = new int[numCol];
-		for(int j=0; j<col.length; j++) {
-			if (col[j]>max) {
-				max = col[j];
-			}
+		int nbLignes = tab.length;
+		int[] col = new int[nbLignes];
+		for (int i = 0; i < tab.length; i++) {
+			col[i] = tab[i][numCol];
 		}
-		
+
 		return col;
+	}
+
+	public static int[] ordonnerArrayDesc(int[] tab) {
+		int[] array = tab;
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = i + 1; j < array.length; j++)
+				if (array[j] > array[i]) {
+					// les valeurs plus grandes passent à droite
+					invertValeurs(tab, i, j);
+
+				}
+		}
+
+		return array;
+	}
+
+	public static int[] ordonnerArrayAsc(int[] tab) {
+		int[] array = tab;
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = i + 1; j < array.length; j++)
+				if (array[j] < array[i]) {
+					// les valeurs plus petites passent à gauche
+					invertValeurs(tab, i, j);
+
+				}
+		}
+
+		return array;
+	}
+
+	public static void invertValeurs(int[] tab, int x, int y) {
+		int temp;
+		temp = tab[x];
+		tab[x] = tab[y];
+		tab[y] = temp;
 	}
 }
