@@ -14,4 +14,4 @@ public class NFA031_Mod1_Exo2_PrixRistourne {
 		System.out.format("Le prix formaté après ristourne est : %.2f euros \n", prixApresRistourne);
 
 	}
-}F
+}

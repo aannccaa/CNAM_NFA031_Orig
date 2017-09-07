@@ -3,8 +3,9 @@ Exercice 2
 a) Ecrire un code qui permet de saisir N lettres majuscules pour les placer dans un tableau . 
 b) On appelle 'plateau' une suite de majuscules contiguës et identiques . 
     Ecrire un code qui calcule le nombre de plateaux contenus dans le tableau .
-       Exemple : si le tableau est le suivant : {'A' , 'B' , 'B' , 'T' , 'V' , 'V' , 'V' , 'A' , 'B' , 'B'} , le
-                         programme indiquera qu'il y a 3 plateaux .
+       Exemple : si le tableau est le suivant : 
+       {'A' , 'B' , 'B' , 'T' , 'V' , 'V' , 'V' , 'A' , 'B' , 'B'}, 
+       le programme indiquera qu'il y a 3 plateaux .
 */
 
 public class NFA031_recap2 {
